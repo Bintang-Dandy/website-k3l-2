@@ -291,6 +291,7 @@ const quizQuestions = [
 // 2. DOM INITIALIZATION & EVENT LISTENERS
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
+  initInitialPreloader();
   initPageRouter();
   renderLabIndicators();
   renderSigns("all");
@@ -300,6 +301,49 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuiz();
   renderComparisonBars();
 });
+
+// Initial Welcome Preloader ("Kelompok 1 will be Ready" 1% -> 100%)
+function initInitialPreloader() {
+  const preloader = document.getElementById("initialPreloader");
+  const percentEl = document.getElementById("preloaderPercentage");
+  const barEl = document.getElementById("preloaderBar");
+
+  if (!preloader || !percentEl || !barEl) return;
+
+  document.body.classList.add("loading-active");
+  let progress = 1;
+  const targetDuration = 1800; // 1.8 detik animasi
+  const startTime = performance.now();
+
+  function updateLoader(currentTime) {
+    const elapsed = currentTime - startTime;
+    const rawRatio = Math.min(elapsed / targetDuration, 1);
+    // Kurva easing halus agar bertahap cepat lalu melambat presisi ke 100%
+    const easedRatio = 1 - Math.pow(1 - rawRatio, 2.8);
+    progress = Math.min(100, Math.max(1, Math.round(1 + easedRatio * 99)));
+
+    percentEl.textContent = `${progress}%`;
+    barEl.style.width = `${progress}%`;
+
+    if (rawRatio < 1) {
+      requestAnimationFrame(updateLoader);
+    } else {
+      percentEl.textContent = "100%";
+      barEl.style.width = "100%";
+
+      setTimeout(() => {
+        preloader.classList.add("fade-out");
+        document.body.classList.remove("loading-active");
+
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 550);
+      }, 250);
+    }
+  }
+
+  requestAnimationFrame(updateLoader);
+}
 
 // Theme Management (Dark / Light)
 function initTheme() {
@@ -350,10 +394,12 @@ function updateThemeIcon(theme) {
   }
 }
 
-// Page Router & Dynamic Page Switching (SPA)
+// Page Router & Dynamic Page Switching (SPA) with "Kelompok 1 is Ready" Transition
 function initPageRouter() {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileNav = document.getElementById("mobileNav");
+  const pageLoader = document.getElementById("pageLoader");
+  let isTransitioning = false;
 
   // Mobile menu toggle
   if (mobileMenuBtn && mobileNav) {
@@ -362,7 +408,7 @@ function initPageRouter() {
     });
   }
 
-  function switchPage(pageId) {
+  function switchPage(pageId, withAnimation = false) {
     const rawId = (pageId || "beranda").replace("#", "").trim();
     let target = rawId || "beranda";
     let targetEl = document.getElementById(target);
@@ -373,61 +419,82 @@ function initPageRouter() {
       targetEl = document.getElementById("beranda");
     }
 
-    // Toggle active state for all page views
-    const pageViews = document.querySelectorAll(".page-view");
-    pageViews.forEach(page => {
-      page.classList.remove("active");
-    });
+    const executeSwitch = () => {
+      // Toggle active state for all page views
+      const pageViews = document.querySelectorAll(".page-view");
+      pageViews.forEach(page => {
+        page.classList.remove("active");
+      });
 
-    if (targetEl) {
-      targetEl.classList.add("active");
-    }
-
-    // Update active state on nav links
-    const navLinks = document.querySelectorAll(".nav-link");
-    const dropdownItems = document.querySelectorAll(".nav-dropdown-item");
-
-    navLinks.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === `#${target}`) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
+      if (targetEl) {
+        targetEl.classList.add("active");
       }
-    });
 
-    let isDropdownActive = false;
-    dropdownItems.forEach(item => {
-      const href = item.getAttribute("href");
-      if (href === `#${target}`) {
-        item.classList.add("active");
-        isDropdownActive = true;
-      } else {
-        item.classList.remove("active");
+      // Update active state on nav links
+      const navLinks = document.querySelectorAll(".nav-link");
+      const dropdownItems = document.querySelectorAll(".nav-dropdown-item");
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === `#${target}`) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+
+      let isDropdownActive = false;
+      dropdownItems.forEach(item => {
+        const href = item.getAttribute("href");
+        if (href === `#${target}`) {
+          item.classList.add("active");
+          isDropdownActive = true;
+        } else {
+          item.classList.remove("active");
+        }
+      });
+
+      const dropdownBtn = document.querySelector(".nav-dropdown-btn");
+      if (dropdownBtn) {
+        if (isDropdownActive) {
+          dropdownBtn.classList.add("active");
+        } else {
+          dropdownBtn.classList.remove("active");
+        }
       }
-    });
 
-    const dropdownBtn = document.querySelector(".nav-dropdown-btn");
-    if (dropdownBtn) {
-      if (isDropdownActive) {
-        dropdownBtn.classList.add("active");
-      } else {
-        dropdownBtn.classList.remove("active");
+      // Close mobile nav drawer if open
+      if (mobileNav) {
+        mobileNav.classList.remove("open");
       }
-    }
 
-    // Close mobile nav drawer if open
-    if (mobileNav) {
-      mobileNav.classList.remove("open");
-    }
+      // Scroll to top of the page smoothly
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
-    // Scroll to top of the page smoothly
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (withAnimation && pageLoader) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      // Tampilkan animasi loading "Kelompok 1 is Ready"
+      pageLoader.classList.add("show");
+
+      setTimeout(() => {
+        executeSwitch();
+
+        setTimeout(() => {
+          pageLoader.classList.remove("show");
+          isTransitioning = false;
+        }, 220);
+      }, 450);
+    } else {
+      executeSwitch();
+    }
   }
 
   // Handle browser Back / Forward buttons
   window.addEventListener("hashchange", () => {
-    switchPage(window.location.hash);
+    switchPage(window.location.hash, true);
   });
 
   // Global click interception for hash links pointing to pages
@@ -443,17 +510,16 @@ function initPageRouter() {
 
     if (targetPage && targetPage.classList.contains("page-view")) {
       e.preventDefault();
-      if (window.location.hash === href) {
-        switchPage(pageId);
-      } else {
+      if (window.location.hash !== href) {
         window.location.hash = href;
       }
+      switchPage(pageId, true);
     }
   });
 
-  // Initial load: respect hash or open beranda
+  // Initial load: respect hash or open beranda (tanpa jeda loading pertama)
   const initialHash = window.location.hash ? window.location.hash.substring(1) : "beranda";
-  switchPage(initialHash);
+  switchPage(initialHash, false);
 }
 
 // Render 7 Indikator K3 Laboratorium

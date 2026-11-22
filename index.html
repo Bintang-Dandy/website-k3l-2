@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SafeSphere K3 - Portal Edukasi & Pusat Informasi Keselamatan, Kesehatan Kerja dan Lingkungan (K3L) Berbasis Riset Jurnal Ilmiah Terpercaya">
+  <meta name="description"
+    content="SafeSphere K3 - Portal Edukasi & Pusat Informasi Keselamatan, Kesehatan Kerja dan Lingkungan (K3L) Berbasis Riset Jurnal Ilmiah Terpercaya">
   <title>SafeSphere K3 | Portal Ilmiah Keselamatan & Kesehatan Kerja</title>
-  
+
   <!-- Modern Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <!-- ===================================================================
+       INITIAL PRELOADER (Kelompok 1 will be Ready - 1% to 100%)
+       =================================================================== -->
+  <div id="initialPreloader" class="initial-preloader">
+    <div class="preloader-background">
+      <div class="preloader-glow-orb"></div>
+    </div>
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-ring-outer"></div>
+        <div class="preloader-ring-inner"></div>
+        <div class="preloader-logo-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="preloader-text-group">
+        <div class="preloader-badge">Portal Edukasi K3L</div>
+        <h1 class="preloader-title">Kelompok 1 <span class="preloader-status">will be Ready</span></h1>
+        <p class="preloader-subtitle">Memuat sistem edukasi keselamatan kerja & laboratorium...</p>
+      </div>
+
+      <div class="preloader-progress-box">
+        <div class="preloader-counter-wrap">
+          <span class="preloader-label">Menginisialisasi sistem...</span>
+          <span id="preloaderPercentage" class="preloader-percentage">1%</span>
+        </div>
+        <div class="preloader-track">
+          <div id="preloaderBar" class="preloader-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===================================================================
        HEADER & NAVIGATION
@@ -22,14 +64,15 @@
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Navigasi Utama">
-        <a href="#beranda" class="brand-logo" aria-label="SafeSphere K3 Homepage">
+        <a href="#beranda" class="brand-logo" aria-label="Kelompok 1 K3 Homepage">
           <div class="brand-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               <polyline points="9 12 11 14 15 10"></polyline>
             </svg>
           </div>
-          <span class="brand-text">SafeSphere <span>K3L</span></span>
+          <span class="brand-text">Kelompok 1 <span>K3L</span></span>
         </a>
 
         <div class="nav-menu">
@@ -41,7 +84,9 @@
           <div class="nav-dropdown">
             <button class="nav-link nav-dropdown-btn" type="button">
               Lainnya
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </button>
             <div class="nav-dropdown-menu">
               <a href="#rambu-k3" class="nav-dropdown-item">Rambu GHS</a>
@@ -53,14 +98,15 @@
         </div>
 
         <div class="nav-actions">
-          <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Ganti Tema Gelap/Terang" title="Ganti Tema">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Ganti Tema Gelap/Terang"
+            title="Ganti Tema">
             <span id="themeIcon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
             </span>
           </button>
-          
+
           <a href="#toolkit-k3" class="btn btn-primary btn-sm">Uji Lab Anda</a>
 
           <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="Buka Menu Navigasi">
@@ -98,37 +144,60 @@
         <div class="hero-grid">
           <div class="hero-content">
             <span class="badge badge-emerald">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
               Edukasi K3 Berbasis Riset Jurnal Ilmiah
             </span>
             <h1>
               Mewujudkan Budaya <span class="gradient-text">Keselamatan Kerja</span> & Lingkungan Sehat
             </h1>
             <p class="hero-description">
-              Platform referensi komprehensif Keselamatan, Kesehatan Kerja, dan Lingkungan (K3L). Dirangkum dari publikasi ilmiah tentang urgensi K3, audit 7 indikator keselamatan laboratorium kimia farmasi, serta pembudayaan K3 sejak dini di institusi pendidikan.
+              Platform referensi komprehensif Keselamatan, Kesehatan Kerja, dan Lingkungan (K3L). Dirangkum dari
+              publikasi ilmiah tentang urgensi K3, audit 7 indikator keselamatan laboratorium kimia farmasi, serta
+              pembudayaan K3 sejak dini di institusi pendidikan.
             </p>
             <div class="hero-actions">
               <a href="#standar-lab" class="btn btn-primary">
                 <span>Pelajari 7 Standar Lab</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
               </a>
               <a href="#grafik-data" class="btn btn-outline">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg>
                 <span>Lihat Data & Grafik</span>
               </a>
             </div>
 
             <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div
+                style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 <span>Standar UU No. 1 / 1970</span>
               </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div
+                style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 <span>Uji Signifikansi (p = 0.000)</span>
               </div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div
+                style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 <span>5 Klasifikasi Dr. Suma'mur</span>
               </div>
             </div>
@@ -136,10 +205,13 @@
 
           <div class="hero-visual">
             <div class="hero-image-card">
-              <img src="assets/images/hero-lab.jpg" alt="Laboratorium Modern Berstandar K3 dengan APD Lengkap dan Sistem Monitoring">
+              <img src="assets/images/hero-lab.jpg"
+                alt="Laboratorium Modern Berstandar K3 dengan APD Lengkap dan Sistem Monitoring">
               <div class="hero-badge-overlay">
                 <div>
-                  <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--brand-emerald-light); font-weight: 700;">Standar Operasional</div>
+                  <div
+                    style="font-size: 0.75rem; text-transform: uppercase; color: var(--brand-emerald-light); font-weight: 700;">
+                    Standar Operasional</div>
                   <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">Good Laboratory Practice & K3L</div>
                 </div>
                 <div style="text-align: right;">
@@ -150,11 +222,15 @@
             </div>
 
             <div class="floating-kpi-chip">
-              <div style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--brand-emerald-glow); display: flex; align-items: center; justify-content: center; color: var(--brand-emerald);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <div
+                style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--brand-emerald-glow); display: flex; align-items: center; justify-content: center; color: var(--brand-emerald);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
               </div>
               <div>
-                <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); line-height: 1.1;">96.74%</div>
+                <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); line-height: 1.1;">96.74%
+                </div>
                 <div style="font-size: 0.725rem; color: var(--text-muted);">Tingkat Kepatuhan K3 Lab</div>
               </div>
             </div>
@@ -167,7 +243,10 @@
             <div class="stat-top">
               <span class="stat-label">Indeks Kepatuhan K3</span>
               <span class="stat-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
               </span>
             </div>
             <div class="stat-number">96.74%</div>
@@ -178,7 +257,13 @@
             <div class="stat-top">
               <span class="stat-label">Indikator Teruji</span>
               <span class="stat-icon" style="color: var(--accent-cyan);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </span>
             </div>
             <div class="stat-number">7 Standar</div>
@@ -189,7 +274,12 @@
             <div class="stat-top">
               <span class="stat-label">Klasifikasi Bahaya</span>
               <span class="stat-icon" style="color: var(--accent-amber);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                  </path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
               </span>
             </div>
             <div class="stat-number">5 Faktor</div>
@@ -200,7 +290,10 @@
             <div class="stat-top">
               <span class="stat-label">Uji Signifikansi</span>
               <span class="stat-icon" style="color: var(--accent-red);">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
               </span>
             </div>
             <div class="stat-number">p = 0.000</div>
@@ -214,12 +307,18 @@
         <div class="modules-catalog-wrap">
           <div class="catalog-header">
             <span class="badge badge-emerald">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
               Katalog Modul Mandiri
             </span>
             <h2 class="catalog-title">Eksplorasi Materi & Modul K3</h2>
             <p class="catalog-subtitle">
-              Pilih materi di bawah ini untuk membuka halaman pembelajaran lengkap yang berbasis riset jurnal ilmiah terakreditasi, standar operasional, dan instrumen interaktif.
+              Pilih materi di bawah ini untuk membuka halaman pembelajaran lengkap yang berbasis riset jurnal ilmiah
+              terakreditasi, standar operasional, dan instrumen interaktif.
             </p>
           </div>
 
@@ -227,20 +326,26 @@
             <!-- Card 1: Urgensi & Regulasi -->
             <article class="module-card">
               <div>
-                <div class="module-card-icon" style="background: rgba(16, 185, 129, 0.12); color: var(--brand-emerald);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <div class="module-card-icon"
+                  style="background: rgba(16, 185, 129, 0.12); color: var(--brand-emerald);">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-emerald">Modul 01</span></div>
                 <h3 class="module-card-title">Urgensi & Regulasi K3L</h3>
                 <p class="module-card-desc">
-                  Pelajari landasan hukum UU No. 1 Tahun 1970, 3 pilar K3L (Safety, Health, Environment), dan spektrum konsekuensi kelalaian kerja dari luka ringan hingga fatal.
+                  Pelajari landasan hukum UU No. 1 Tahun 1970, 3 pilar K3L (Safety, Health, Environment), dan spektrum
+                  konsekuensi kelalaian kerja dari luka ringan hingga fatal.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">UU No. 1/1970 • JK3L</span>
                 <a href="#urgensi" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -249,19 +354,28 @@
             <article class="module-card">
               <div>
                 <div class="module-card-icon" style="background: rgba(6, 182, 212, 0.12); color: var(--accent-cyan);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-cyan">Modul 02</span></div>
                 <h3 class="module-card-title">7 Standar K3 Laboratorium</h3>
                 <p class="module-card-desc">
-                  Evaluasi 7 indikator kepatuhan di laboratorium kimia (rata-rata kepatuhan 96.74%), SOP penanganan bahan, serta telaah kasus ledakan dan kebakaran lab nyata.
+                  Evaluasi 7 indikator kepatuhan di laboratorium kimia (rata-rata kepatuhan 96.74%), SOP penanganan
+                  bahan, serta telaah kasus ledakan dan kebakaran lab nyata.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">96.74% Kepatuhan • Palembang</span>
                 <a href="#standar-lab" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -270,19 +384,27 @@
             <article class="module-card">
               <div>
                 <div class="module-card-icon" style="background: rgba(245, 158, 11, 0.12); color: var(--accent-amber);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                    </path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-amber">Modul 03</span></div>
                 <h3 class="module-card-title">Bahaya Kerja & APD Wajib</h3>
                 <p class="module-card-desc">
-                  Klasifikasi 5 potensi bahaya menurut Dr. Suma'mur P.K. (Fisik, Kimia, Biologi, Ergonomi, Psikologi) serta panduan spesifikasi APD laboratorium wajib.
+                  Klasifikasi 5 potensi bahaya menurut Dr. Suma'mur P.K. (Fisik, Kimia, Biologi, Ergonomi, Psikologi)
+                  serta panduan spesifikasi APD laboratorium wajib.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">5 Klasifikasi • Standar APD</span>
                 <a href="#klasifikasi-bahaya" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -291,19 +413,26 @@
             <article class="module-card">
               <div>
                 <div class="module-card-icon" style="background: rgba(239, 68, 68, 0.12); color: var(--accent-red);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-red">Modul 04</span></div>
                 <h3 class="module-card-title">Katalog Simbol Bahaya GHS</h3>
                 <p class="module-card-desc">
-                  Eksplorasi interaktif 9 simbol piktogram Globally Harmonized System (GHS), rambu larangan, instruksi wajib, dan rambu evakuasi darurat laboratorium.
+                  Eksplorasi interaktif 9 simbol piktogram Globally Harmonized System (GHS), rambu larangan, instruksi
+                  wajib, dan rambu evakuasi darurat laboratorium.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">9 Piktogram Global</span>
                 <a href="#rambu-k3" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -312,19 +441,26 @@
             <article class="module-card">
               <div>
                 <div class="module-card-icon" style="background: rgba(59, 130, 246, 0.12); color: var(--accent-blue);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 20V10"></path>
+                    <path d="M12 20V4"></path>
+                    <path d="M6 20v-6"></path>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-cyan">Modul 05</span></div>
                 <h3 class="module-card-title">Grafik & Analisis Riset</h3>
                 <p class="module-card-desc">
-                  Visualisasi grafik bar kepatuhan K3, diagram donat distribusi bahaya kerja, serta data komparasi efektivitas Pre-Test vs Post-Test pembudayaan K3 (p = 0.000).
+                  Visualisasi grafik bar kepatuhan K3, diagram donat distribusi bahaya kerja, serta data komparasi
+                  efektivitas Pre-Test vs Post-Test pembudayaan K3 (p = 0.000).
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">SPSS 26 • T-Test Empiris</span>
                 <a href="#grafik-data" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -332,20 +468,27 @@
             <!-- Card 6: Audit & Kuis -->
             <article class="module-card">
               <div>
-                <div class="module-card-icon" style="background: rgba(16, 185, 129, 0.12); color: var(--brand-emerald);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                <div class="module-card-icon"
+                  style="background: rgba(16, 185, 129, 0.12); color: var(--brand-emerald);">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-emerald">Modul 06</span></div>
                 <h3 class="module-card-title">Audit Mandiri & Kuis K3</h3>
                 <p class="module-card-desc">
-                  Instrumen mandiri untuk mengukur persentase kesiapsiagaan laboratorium Anda secara langsung dan kuis interaktif dengan umpan balik penjelasan ilmiah.
+                  Instrumen mandiri untuk mengukur persentase kesiapsiagaan laboratorium Anda secara langsung dan kuis
+                  interaktif dengan umpan balik penjelasan ilmiah.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">Checklist & Kuis Interaktif</span>
                 <a href="#toolkit-k3" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -353,20 +496,27 @@
             <!-- Card 7: Jurnal Referensi -->
             <article class="module-card">
               <div>
-                <div class="module-card-icon" style="background: rgba(139, 92, 246, 0.12); color: var(--accent-purple);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <div class="module-card-icon"
+                  style="background: rgba(139, 92, 246, 0.12); color: var(--accent-purple);">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-purple">Modul 07</span></div>
                 <h3 class="module-card-title">Repositori Jurnal Ilmiah</h3>
                 <p class="module-card-desc">
-                  Daftar 3 artikel jurnal ilmiah nasional terakreditasi yang menjadi sumber rujukan empiris konten SafeSphere K3 beserta metodologi dan sitasinya.
+                  Daftar 3 artikel jurnal ilmiah nasional terakreditasi yang menjadi sumber rujukan empiris konten
+                  SafeSphere K3 beserta metodologi dan sitasinya.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">3 Publikasi Terakreditasi</span>
                 <a href="#jurnal" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -375,19 +525,27 @@
             <article class="module-card">
               <div>
                 <div class="module-card-icon" style="background: rgba(6, 182, 212, 0.12); color: var(--accent-cyan);">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
                 </div>
                 <div class="module-card-badge"><span class="badge badge-cyan">Modul 08</span></div>
                 <h3 class="module-card-title">Tim Penyusun Proyek</h3>
                 <p class="module-card-desc">
-                  Profil para kolaborator yang berkontribusi dalam perancangan antarmuka, studi pustaka jurnal keselamatan kerja, dan pemrograman sistem.
+                  Profil para kolaborator yang berkontribusi dalam perancangan antarmuka, studi pustaka jurnal
+                  keselamatan kerja, dan pemrograman sistem.
                 </p>
               </div>
               <div class="module-card-meta">
                 <span class="module-card-tag">Profil Kolaborator</span>
                 <a href="#tim" class="module-card-btn">
                   <span>Buka Halaman</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </a>
               </div>
             </article>
@@ -404,7 +562,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -418,7 +578,9 @@
           <span class="badge badge-emerald">Landasan & Esensi</span>
           <h2 class="section-title">Urgensi Keselamatan, Kesehatan Kerja & Lingkungan (K3L)</h2>
           <p class="section-subtitle">
-            Berdasarkan telaah editorial Jurnal Keselamatan, Kesehatan Kerja dan Lingkungan (JK3L) oleh Aulia Rahman (2020), K3L merupakan pilar esensial dalam setiap denyut aktivitas manusia. Pengabaian terhadap salah satu unsurnya berakibat fatal bagi pekerja, aset, maupun masyarakat.
+            Berdasarkan telaah editorial Jurnal Keselamatan, Kesehatan Kerja dan Lingkungan (JK3L) oleh Aulia Rahman
+            (2020), K3L merupakan pilar esensial dalam setiap denyut aktivitas manusia. Pengabaian terhadap salah satu
+            unsurnya berakibat fatal bagi pekerja, aset, maupun masyarakat.
           </p>
         </div>
 
@@ -426,46 +588,75 @@
         <div class="pillars-grid">
           <article class="pillar-card">
             <div class="pillar-icon-box icon-emerald">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
             </div>
             <h3>1. Keselamatan Kerja (Safety)</h3>
             <p>
-              Berfokus pada perlindungan fisik tenaga kerja dari risiko kecelakaan langsung saat menjalankan tugas operasional, pekerjaan proyek, maupun praktikum laboratorium.
+              Berfokus pada perlindungan fisik tenaga kerja dari risiko kecelakaan langsung saat menjalankan tugas
+              operasional, pekerjaan proyek, maupun praktikum laboratorium.
             </p>
             <ul class="pillar-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pencegahan insiden luka bakar & goresan</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Eliminasi bahaya ledakan & kebakaran</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Penyediaan sarana proteksi diri (APD)</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Pencegahan insiden luka bakar & goresan</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Eliminasi bahaya ledakan & kebakaran</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Penyediaan sarana proteksi diri (APD)</li>
             </ul>
           </article>
 
           <article class="pillar-card">
             <div class="pillar-icon-box icon-cyan">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
             </div>
             <h3>2. Kesehatan Kerja (Health)</h3>
             <p>
-              Kajian mendalam terhadap pencegahan timbulnya Penyakit Akibat Kerja (PAK), baik berupa efek jangka pendek (pusing, mual, alergi) maupun gangguan fatal kronis.
+              Kajian mendalam terhadap pencegahan timbulnya Penyakit Akibat Kerja (PAK), baik berupa efek jangka pendek
+              (pusing, mual, alergi) maupun gangguan fatal kronis.
             </p>
             <ul class="pillar-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Proteksi paparan zat karsinogenik</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pencegahan tuli akibat kebisingan mesin</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Mitigasi serangan jantung & stres kerja</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Proteksi paparan zat karsinogenik</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Pencegahan tuli akibat kebisingan mesin</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Mitigasi serangan jantung & stres kerja</li>
             </ul>
           </article>
 
           <article class="pillar-card">
             <div class="pillar-icon-box icon-purple">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                <path d="M2 12h20"></path>
+              </svg>
             </div>
             <h3>3. Kesehatan Lingkungan (Environment)</h3>
             <p>
-              Memastikan seluruh sisa aktivitas kerja, uap beracun, dan limbah kimia tidak dibuang sembarangan ke tanah, air, atau udara yang dapat merusak biosfer alam.
+              Memastikan seluruh sisa aktivitas kerja, uap beracun, dan limbah kimia tidak dibuang sembarangan ke tanah,
+              air, atau udara yang dapat merusak biosfer alam.
             </p>
             <ul class="pillar-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pengelolaan limbah B3 berstandar amdal</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pengendalian emisi uap korosif di lemari asam</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Menjamin keselamatan masyarakat sekitar</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Pengelolaan limbah B3 berstandar amdal</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Pengendalian emisi uap korosif di lemari asam</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg> Menjamin keselamatan masyarakat sekitar</li>
             </ul>
           </article>
         </div>
@@ -474,12 +665,14 @@
         <div class="risk-spectrum">
           <div class="spectrum-header">
             <h3 style="font-size: 1.35rem; margin-bottom: 0.35rem;">Spektrum Dampak Kelalaian K3L Bagi Manusia</h3>
-            <p style="font-size: 0.875rem;">Seperti dipaparkan dalam editorial JK3L, konsekuensi risiko merentang dari tingkat cidera ringan hingga kecacatan permanen dan kehilangan nyawa:</p>
+            <p style="font-size: 0.875rem;">Seperti dipaparkan dalam editorial JK3L, konsekuensi risiko merentang dari
+              tingkat cidera ringan hingga kecacatan permanen dan kehilangan nyawa:</p>
           </div>
           <div class="spectrum-flow">
             <div class="spectrum-step step-ringan">
               <h4>Luka Ringan & Pusing</h4>
-              <p>Luka gores benda tajam, iritasi mata ringan akibat uap zat volatil, atau pusing sesaat karena sirkulasi minim.</p>
+              <p>Luka gores benda tajam, iritasi mata ringan akibat uap zat volatil, atau pusing sesaat karena sirkulasi
+                minim.</p>
             </div>
             <div class="spectrum-step step-sedang">
               <h4>Luka Bakar Kimia</h4>
@@ -491,7 +684,8 @@
             </div>
             <div class="spectrum-step step-fatal">
               <h4>Serangan Jantung & Kematian</h4>
-              <p>Keracunan uap sianida, sengatan listrik tegangan tinggi, ledakan reaktor lab, dan serangan jantung fatal.</p>
+              <p>Keracunan uap sianida, sengatan listrik tegangan tinggi, ledakan reaktor lab, dan serangan jantung
+                fatal.</p>
             </div>
           </div>
         </div>
@@ -500,7 +694,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#beranda" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Halaman Sebelumnya</small>
                 <span>Beranda Portal</span>
@@ -511,7 +707,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>7 Standar K3 Laboratorium</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -526,7 +724,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -540,7 +740,9 @@
           <span class="badge badge-cyan">Riset Empiris DIII Farmasi Palembang</span>
           <h2 class="section-title">7 Indikator Evaluasi K3 Laboratorium Kimia</h2>
           <p class="section-subtitle">
-            Berdasarkan penelitian kuantitatif Lilis Maryanti, Yuliani, & Metha Vionari (Gojhes 2025) terhadap 100 responden mahasiswa praktikum di Kota Palembang. Rata-rata kepatuhan mencapai <strong>96.74%</strong> dengan signifikansi statistik (p = 0.000).
+            Berdasarkan penelitian kuantitatif Lilis Maryanti, Yuliani, & Metha Vionari (Gojhes 2025) terhadap 100
+            responden mahasiswa praktikum di Kota Palembang. Rata-rata kepatuhan mencapai <strong>96.74%</strong> dengan
+            signifikansi statistik (p = 0.000).
           </p>
         </div>
 
@@ -552,24 +754,32 @@
         <!-- Historical Accidents in Labs Banner -->
         <div class="incidents-wrapper">
           <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="2.5">
+              <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
             <h3 style="font-size: 1.25rem;">Catatan Kasus Insiden Laboratorium Nyata (Latar Belakang Riset)</h3>
           </div>
           <p style="font-size: 0.85rem; margin-top: 0.5rem;">
-            Penelitian ini dilatarbelakangi fakta bahwa kecerobohan dan ketidakpatuhan SOP di laboratorium dapat menimbulkan bencana mematikan:
+            Penelitian ini dilatarbelakangi fakta bahwa kecerobohan dan ketidakpatuhan SOP di laboratorium dapat
+            menimbulkan bencana mematikan:
           </p>
           <div class="incidents-grid">
             <div class="incident-item">
               <h4>Ledakan Lab Kampus di China (2018)</h4>
-              <p>Terjadi ledakan dahsyat di laboratorium universitas pada 26 Agustus 2018 yang menewaskan 3 orang mahasiswa akibat ketidakpahaman sifat reaktif bahan kimia.</p>
+              <p>Terjadi ledakan dahsyat di laboratorium universitas pada 26 Agustus 2018 yang menewaskan 3 orang
+                mahasiswa akibat ketidakpahaman sifat reaktif bahan kimia.</p>
             </div>
             <div class="incident-item">
               <h4>Ledakan Toples Pemurnian FFUI (2015)</h4>
-              <p>Ledakan toples pemurnian di Gedung Penelitian Apotek Farmasi UI Depok mengakibatkan 14 korban luka-luka (12 luka ringan dan 2 luka berat).</p>
+              <p>Ledakan toples pemurnian di Gedung Penelitian Apotek Farmasi UI Depok mengakibatkan 14 korban luka-luka
+                (12 luka ringan dan 2 luka berat).</p>
             </div>
             <div class="incident-item">
               <h4>Kebakaran Lab Kimia UNDIP (2020)</h4>
-              <p>Kebakaran ruang laboratorium Fakultas Teknik Kimia Universitas Diponegoro pada 27 Agustus 2020 mengakibatkan seorang mahasiswa menderita luka bakar serius.</p>
+              <p>Kebakaran ruang laboratorium Fakultas Teknik Kimia Universitas Diponegoro pada 27 Agustus 2020
+                mengakibatkan seorang mahasiswa menderita luka bakar serius.</p>
             </div>
           </div>
         </div>
@@ -578,7 +788,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#urgensi" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>Urgensi & Regulasi K3L</span>
@@ -589,7 +801,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>5 Klasifikasi Bahaya & APD</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -604,7 +818,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -617,7 +833,8 @@
           <span class="badge badge-amber">Konsep Dr. Suma'mur P.K.</span>
           <h2 class="section-title">5 Klasifikasi Potensi Bahaya & Budaya K3 Edukasi</h2>
           <p class="section-subtitle">
-            Mengacu pada publikasi Pengabdian kepada Masyarakat (PKM) Institut Batari Toja Bone di SMAN 3 Bone (Rahmadani et al., 2025). Tidak ada lingkungan laboratorium yang benar-benar bebas dari potensi bahaya.
+            Mengacu pada publikasi Pengabdian kepada Masyarakat (PKM) Institut Batari Toja Bone di SMAN 3 Bone
+            (Rahmadani et al., 2025). Tidak ada lingkungan laboratorium yang benar-benar bebas dari potensi bahaya.
           </p>
         </div>
 
@@ -637,33 +854,58 @@
               <span class="badge badge-amber">Klasifikasi 1</span>
               <h3>Bahaya Faktor Fisik di Laboratorium</h3>
               <p>
-                Merupakan sumber bahaya yang berasal dari energi fisik atau kondisi mekanik di lingkungan kerja yang dapat menyebabkan kerusakan fisik pada jaringan tubuh atau kecelakaan mekanis.
+                Merupakan sumber bahaya yang berasal dari energi fisik atau kondisi mekanik di lingkungan kerja yang
+                dapat menyebabkan kerusakan fisik pada jaringan tubuh atau kecelakaan mekanis.
               </p>
               <div class="hazard-points">
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                  <div><strong>Sengatan Listrik:</strong> Korsleting stopkontak, kabel terkelupas dekat meja praktikum basah, atau instrumen centrifuge tanpa pembumian (grounding).</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <div><strong>Sengatan Listrik:</strong> Korsleting stopkontak, kabel terkelupas dekat meja praktikum
+                    basah, atau instrumen centrifuge tanpa pembumian (grounding).</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                  <div><strong>Tekanan Panas & Radiasi:</strong> Pemanas bunsen terbuka, microwave destruksi, autoklaf bertekanan tinggi, dan sinar UV transluminator.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <div><strong>Tekanan Panas & Radiasi:</strong> Pemanas bunsen terbuka, microwave destruksi, autoklaf
+                    bertekanan tinggi, dan sinar UV transluminator.</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
-                  <div><strong>Pencahayaan & Kebisingan:</strong> Ruang praktikum temaram yang memicu kesalahan pembacaan buret serta dengung pompa vakum berjam-jam.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                  </svg>
+                  <div><strong>Pencahayaan & Kebisingan:</strong> Ruang praktikum temaram yang memicu kesalahan
+                    pembacaan buret serta dengung pompa vakum berjam-jam.</div>
                 </div>
               </div>
             </div>
 
             <div class="hazard-solution-card">
               <h4>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Tindakan Pencegahan & Mitigasi Fisik:
               </h4>
               <ul>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pemeriksaan rutin kabel listrik dan instalasi sekring otomatis (MCB).</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Memastikan sarung tangan tahan panas (heat-resistant) saat mengangkat labu panas.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Memasang peredam getaran pada mesin centrifuge dan menjaga ventilasi penerangan di atas 300 lux.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Pemeriksaan rutin kabel listrik dan instalasi sekring otomatis (MCB).</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Memastikan sarung tangan tahan panas (heat-resistant) saat mengangkat labu panas.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Memasang peredam getaran pada mesin centrifuge dan menjaga ventilasi penerangan di atas 300
+                  lux.</li>
               </ul>
             </div>
           </div>
@@ -676,33 +918,56 @@
               <span class="badge badge-red">Klasifikasi 2</span>
               <h3>Bahaya Faktor Kimia</h3>
               <p>
-                Meliputi semua bentuk bahan kimia beracun, korosif, reaktif, mudah meledak, karsinogenik, atau mutagenik yang dapat masuk ke tubuh melalui inhalasi uap, ingesti, atau penetrasi kulit.
+                Meliputi semua bentuk bahan kimia beracun, korosif, reaktif, mudah meledak, karsinogenik, atau mutagenik
+                yang dapat masuk ke tubuh melalui inhalasi uap, ingesti, atau penetrasi kulit.
               </p>
               <div class="hazard-points">
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4l-4 4 2 2-2 2 4 4"></path><path d="M4 14l3-3 2 2"></path></svg>
-                  <div><strong>Korosif & Asam Kuat:</strong> H2SO4 pekat, HCl pekat, NaOH yang seketika merusak protein kulit dan kornea mata.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 4l-4 4 2 2-2 2 4 4"></path>
+                    <path d="M4 14l3-3 2 2"></path>
+                  </svg>
+                  <div><strong>Korosif & Asam Kuat:</strong> H2SO4 pekat, HCl pekat, NaOH yang seketika merusak protein
+                    kulit dan kornea mata.</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-                  <div><strong>Pelarut Mudah Terbakar:</strong> Etanol, eter, heksana yang memiliki titik nyala (flash point) sangat rendah di bawah suhu ruang.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <div><strong>Pelarut Mudah Terbakar:</strong> Etanol, eter, heksana yang memiliki titik nyala (flash
+                    point) sangat rendah di bawah suhu ruang.</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"></path></svg>
-                  <div><strong>Uap Toksik & Karsinogen:</strong> Benzena, formaldehida, uap kloroform yang merusak hepar dan sumsum tulang dalam jangka panjang.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20"></path>
+                  </svg>
+                  <div><strong>Uap Toksik & Karsinogen:</strong> Benzena, formaldehida, uap kloroform yang merusak hepar
+                    dan sumsum tulang dalam jangka panjang.</div>
                 </div>
               </div>
             </div>
 
             <div class="hazard-solution-card">
               <h4>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Tindakan Pencegahan & Mitigasi Kimia:
               </h4>
               <ul>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Bekerja di lemari asam (fume hood) dengan aliran laminar saat memindahkan cairan beruap.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pelabelan botol pereaksi secara jelas dengan simbol bahaya GHS dan tanggal kadaluarsa.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Menyiapkan spill kit (pasir, natrium bikarbonat) untuk menetralkan tumpahan asam seketika.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Bekerja di lemari asam (fume hood) dengan aliran laminar saat memindahkan cairan beruap.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Pelabelan botol pereaksi secara jelas dengan simbol bahaya GHS dan tanggal kadaluarsa.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Menyiapkan spill kit (pasir, natrium bikarbonat) untuk menetralkan tumpahan asam seketika.</li>
               </ul>
             </div>
           </div>
@@ -715,29 +980,49 @@
               <span class="badge badge-emerald">Klasifikasi 3</span>
               <h3>Bahaya Faktor Biologi (Biohazard)</h3>
               <p>
-                Risiko infeksi dan kontaminasi dari mikroorganisme patogen (virus, bakteri, parasit, jamur), kultur sel, serta hewan uji atau produk biologis seperti darah dan cairan tubuh.
+                Risiko infeksi dan kontaminasi dari mikroorganisme patogen (virus, bakteri, parasit, jamur), kultur sel,
+                serta hewan uji atau produk biologis seperti darah dan cairan tubuh.
               </p>
               <div class="hazard-points">
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-                  <div><strong>Bakteri & Virus Patogen:</strong> Paparan kultur kuman seperti Staphylococcus aureus, Salmonella, atau virus influenza.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <div><strong>Bakteri & Virus Patogen:</strong> Paparan kultur kuman seperti Staphylococcus aureus,
+                    Salmonella, atau virus influenza.</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="4"></circle></svg>
-                  <div><strong>Aerosol Bio-aerosol:</strong> Pembentukan tetesan mikroskopis saat proses pengocokan (vortexing) atau pipetasi kasar.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="6" cy="12" r="4"></circle>
+                  </svg>
+                  <div><strong>Aerosol Bio-aerosol:</strong> Pembentukan tetesan mikroskopis saat proses pengocokan
+                    (vortexing) atau pipetasi kasar.</div>
                 </div>
               </div>
             </div>
 
             <div class="hazard-solution-card">
               <h4>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Tindakan Pencegahan & Mitigasi Biologi:
               </h4>
               <ul>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Penggunaan Biosafety Cabinet (BSC) Kelas II berfilter HEPA.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sterilisasi panas basah autoklaf pada suhu 121°C selama 15 menit sebelum pembuangan cawan petri.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Desinfeksi rutin meja kerja menggunakan alkohol 70% atau larutan klorin aktif.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Penggunaan Biosafety Cabinet (BSC) Kelas II berfilter HEPA.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Sterilisasi panas basah autoklaf pada suhu 121°C selama 15 menit sebelum pembuangan cawan
+                  petri.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Desinfeksi rutin meja kerja menggunakan alkohol 70% atau larutan klorin aktif.</li>
               </ul>
             </div>
           </div>
@@ -750,29 +1035,49 @@
               <span class="badge badge-cyan">Klasifikasi 4</span>
               <h3>Bahaya Faktor Ergonomi</h3>
               <p>
-                Ketidaksesuaian antara postur tubuh manusia, desain kursi/meja praktikum, serta aktivitas fisik berulang yang memicu kelainan otot rangka (Musculoskeletal Disorders / MSDs).
+                Ketidaksesuaian antara postur tubuh manusia, desain kursi/meja praktikum, serta aktivitas fisik berulang
+                yang memicu kelainan otot rangka (Musculoskeletal Disorders / MSDs).
               </p>
               <div class="hazard-points">
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-8m0 0l-3 3m3-3l3 3"></path></svg>
-                  <div><strong>Postur Membungkuk Berulang:</strong> Menatap lensa mikroskop selama berjam-jam tanpa sandaran leher yang proporsional.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20v-8m0 0l-3 3m3-3l3 3"></path>
+                  </svg>
+                  <div><strong>Postur Membungkuk Berulang:</strong> Menatap lensa mikroskop selama berjam-jam tanpa
+                    sandaran leher yang proporsional.</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-                  <div><strong>Gerakan Repetitif Jemari:</strong> Menekan mikropipet ratusan kali saat preparasi sampel PCR atau titrasi manual berkepanjangan.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <div><strong>Gerakan Repetitif Jemari:</strong> Menekan mikropipet ratusan kali saat preparasi sampel
+                    PCR atau titrasi manual berkepanjangan.</div>
                 </div>
               </div>
             </div>
 
             <div class="hazard-solution-card">
               <h4>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Tindakan Pencegahan & Mitigasi Ergonomi:
               </h4>
               <ul>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Mengatur ketinggian kursi putar laboratorium agar punggung tegak 90 derajat.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Istirahat mikro (micro-breaks) setiap 45 menit untuk peregangan otot leher, bahu, dan pergelangan tangan.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Menggunakan mikropipet elektronik bermuatan motorik ringan untuk mengurangi beban jemari.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Mengatur ketinggian kursi putar laboratorium agar punggung tegak 90 derajat.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Istirahat mikro (micro-breaks) setiap 45 menit untuk peregangan otot leher, bahu, dan
+                  pergelangan tangan.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Menggunakan mikropipet elektronik bermuatan motorik ringan untuk mengurangi beban jemari.</li>
               </ul>
             </div>
           </div>
@@ -785,29 +1090,52 @@
               <span class="badge badge-purple">Klasifikasi 5</span>
               <h3>Bahaya Faktor Psikososial</h3>
               <p>
-                Beban kognitif dan tekanan mental dalam lingkungan kerja yang memicu stres berlebih, hilangnya konsentrasi, kelelahan, dan kecerobohan yang memicu insiden kecelakaan.
+                Beban kognitif dan tekanan mental dalam lingkungan kerja yang memicu stres berlebih, hilangnya
+                konsentrasi, kelelahan, dan kecerobohan yang memicu insiden kecelakaan.
               </p>
               <div class="hazard-points">
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 15h8"></path><circle cx="9" cy="9" r="1"></circle><circle cx="15" cy="9" r="1"></circle></svg>
-                  <div><strong>Kelelahan & Hilang Fokus:</strong> Praktikum maraton hingga larut malam tanpa jeda yang menyebabkan tangan gemetar saat mereaksikan zat.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 15h8"></path>
+                    <circle cx="9" cy="9" r="1"></circle>
+                    <circle cx="15" cy="9" r="1"></circle>
+                  </svg>
+                  <div><strong>Kelelahan & Hilang Fokus:</strong> Praktikum maraton hingga larut malam tanpa jeda yang
+                    menyebabkan tangan gemetar saat mereaksikan zat.</div>
                 </div>
                 <div class="hazard-point-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-                  <div><strong>Tekanan Waktu & Tenggat Ujian:</strong> Terburu-buru mencampur reagen tanpa membaca label dengan teliti karena mengejar target waktu.</div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <div><strong>Tekanan Waktu & Tenggat Ujian:</strong> Terburu-buru mencampur reagen tanpa membaca label
+                    dengan teliti karena mengejar target waktu.</div>
                 </div>
               </div>
             </div>
 
             <div class="hazard-solution-card">
               <h4>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Tindakan Pencegahan & Mitigasi Psikososial:
               </h4>
               <ul>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Penjadwalan giliran kerja/praktikum yang manusiawi dan proporsional.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Briefing keselamatan (Safety Talk) selama 5 menit sebelum praktikum dimulai guna mengondisikan ketenangan pikiran.</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Menciptakan budaya saling mengingatkan antar rekan kerja tanpa rasa segan.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Penjadwalan giliran kerja/praktikum yang manusiawi dan proporsional.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Briefing keselamatan (Safety Talk) selama 5 menit sebelum praktikum dimulai guna mengondisikan
+                  ketenangan pikiran.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Menciptakan budaya saling mengingatkan antar rekan kerja tanpa rasa segan.</li>
               </ul>
             </div>
           </div>
@@ -820,13 +1148,19 @@
               <span class="badge badge-emerald">Perlengkapan Standar K3</span>
               <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Standar Alat Pelindung Diri (APD) Wajib</h3>
               <p style="font-size: 0.9rem; margin-bottom: 1.75rem;">
-                Sebagaimana diamanatkan dalam Jurnal SMAN 3 Bone dan Jurnal Farmasi Palembang, APD adalah garis pertahanan terakhir (last line of defense) yang mutlak wajib digunakan sebelum menginjakkan kaki di ruang laboratorium:
+                Sebagaimana diamanatkan dalam Jurnal SMAN 3 Bone dan Jurnal Farmasi Palembang, APD adalah garis
+                pertahanan terakhir (last line of defense) yang mutlak wajib digunakan sebelum menginjakkan kaki di
+                ruang laboratorium:
               </p>
 
               <div class="apd-items-list">
                 <div class="apd-item-pill">
                   <div class="apd-item-pill-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z">
+                      </path>
+                    </svg>
                   </div>
                   <div>
                     <div class="apd-item-pill-title">Jas Laboratorium</div>
@@ -836,7 +1170,11 @@
 
                 <div class="apd-item-pill">
                   <div class="apd-item-pill-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="4"></circle><circle cx="18" cy="12" r="4"></circle><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="6" cy="12" r="4"></circle>
+                      <circle cx="18" cy="12" r="4"></circle>
+                      <line x1="10" y1="12" x2="14" y2="12"></line>
+                    </svg>
                   </div>
                   <div>
                     <div class="apd-item-pill-title">Safety Goggles</div>
@@ -846,7 +1184,11 @@
 
                 <div class="apd-item-pill">
                   <div class="apd-item-pill-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v7"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"></path>
+                      <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v7"></path>
+                      <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                    </svg>
                   </div>
                   <div>
                     <div class="apd-item-pill-title">Sarung Tangan Nitril</div>
@@ -856,7 +1198,10 @@
 
                 <div class="apd-item-pill">
                   <div class="apd-item-pill-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M8 12h8"></path></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="8"></circle>
+                      <path d="M8 12h8"></path>
+                    </svg>
                   </div>
                   <div>
                     <div class="apd-item-pill-title">Masker Respirator N95</div>
@@ -866,18 +1211,23 @@
 
                 <div class="apd-item-pill" style="grid-column: span 2;">
                   <div class="apd-item-pill-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
                   </div>
                   <div>
                     <div class="apd-item-pill-title">Sepatu Pelindung Tertutup (Safety Shoes)</div>
-                    <div class="apd-item-pill-sub">Menutup seluruh punggung kaki dari tumpahan zat asam pekat dan pecahan kaca (dilarang sandal)</div>
+                    <div class="apd-item-pill-sub">Menutup seluruh punggung kaki dari tumpahan zat asam pekat dan
+                      pecahan kaca (dilarang sandal)</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="apd-image-wrap">
-              <img src="assets/images/apd-lab.jpg" alt="Foto Asli Peralatan Alat Pelindung Diri K3 Laboratorium: Jas Lab, Kacamata Goggle, Masker, Sarung Tangan, dan Sepatu Safety">
+              <img src="assets/images/apd-lab.jpg"
+                alt="Foto Asli Peralatan Alat Pelindung Diri K3 Laboratorium: Jas Lab, Kacamata Goggle, Masker, Sarung Tangan, dan Sepatu Safety">
             </div>
           </div>
         </div>
@@ -886,7 +1236,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#standar-lab" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>7 Standar K3 Laboratorium</span>
@@ -897,7 +1249,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>Katalog Rambu & Simbol GHS</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -912,7 +1266,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -926,7 +1282,8 @@
           <span class="badge badge-red">Identifikasi Visual Standar Global</span>
           <h2 class="section-title">Katalog Simbol Bahaya Kimia (GHS) & Rambu K3</h2>
           <p class="section-subtitle">
-            Pelabelan bahan kimia dan penanda peringatan merupakan instrumen penting pencegahan bencana di laboratorium. Klik setiap kartu untuk mempelajari karakteristik, contoh bahan kimia, serta prosedur penanganan daruratnya.
+            Pelabelan bahan kimia dan penanda peringatan merupakan instrumen penting pencegahan bencana di laboratorium.
+            Klik setiap kartu untuk mempelajari karakteristik, contoh bahan kimia, serta prosedur penanganan daruratnya.
           </p>
         </div>
 
@@ -946,7 +1303,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#klasifikasi-bahaya" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>Klasifikasi Bahaya & APD</span>
@@ -957,7 +1316,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>Grafik & Analisis Riset</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -972,7 +1333,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -985,7 +1348,8 @@
           <span class="badge badge-cyan">Visualisasi Riset Empiris</span>
           <h2 class="section-title">Analisis Statistik & Grafik Temuan Ilmiah</h2>
           <p class="section-subtitle">
-            Kompilasi data kuantitatif dari penelitian K3 laboratorium DIII Farmasi Palembang dan hasil program edukasi pengabdian masyarakat SMAN 3 Bone.
+            Kompilasi data kuantitatif dari penelitian K3 laboratorium DIII Farmasi Palembang dan hasil program edukasi
+            pengabdian masyarakat SMAN 3 Bone.
           </p>
         </div>
 
@@ -1018,17 +1382,23 @@
             <div class="donut-chart-wrap">
               <div class="donut-svg-container">
                 <svg width="190" height="190" viewBox="0 0 42 42">
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--bg-secondary)" stroke-width="5"></circle>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--bg-secondary)" stroke-width="5">
+                  </circle>
                   <!-- 1. Kimia (35%) -->
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#ef4444" stroke-width="5" stroke-dasharray="35 65" stroke-dashoffset="25"></circle>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#ef4444" stroke-width="5"
+                    stroke-dasharray="35 65" stroke-dashoffset="25"></circle>
                   <!-- 2. Fisik (25%) -->
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#f59e0b" stroke-width="5" stroke-dasharray="25 75" stroke-dashoffset="90"></circle>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#f59e0b" stroke-width="5"
+                    stroke-dasharray="25 75" stroke-dashoffset="90"></circle>
                   <!-- 3. Ergonomi (18%) -->
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#06b6d4" stroke-width="5" stroke-dasharray="18 82" stroke-dashoffset="65"></circle>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#06b6d4" stroke-width="5"
+                    stroke-dasharray="18 82" stroke-dashoffset="65"></circle>
                   <!-- 4. Biologi (12%) -->
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#10b981" stroke-width="5" stroke-dasharray="12 88" stroke-dashoffset="47"></circle>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#10b981" stroke-width="5"
+                    stroke-dasharray="12 88" stroke-dashoffset="47"></circle>
                   <!-- 5. Psikologi (10%) -->
-                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#8b5cf6" stroke-width="5" stroke-dasharray="10 90" stroke-dashoffset="35"></circle>
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#8b5cf6" stroke-width="5"
+                    stroke-dasharray="10 90" stroke-dashoffset="35"></circle>
                 </svg>
                 <div class="donut-center-text">
                   <div class="donut-center-num">100%</div>
@@ -1037,11 +1407,16 @@
               </div>
 
               <div class="chart-legend">
-                <div class="legend-chip"><span class="legend-color-dot" style="background: #ef4444;"></span> Kimia (35%)</div>
-                <div class="legend-chip"><span class="legend-color-dot" style="background: #f59e0b;"></span> Fisik (25%)</div>
-                <div class="legend-chip"><span class="legend-color-dot" style="background: #06b6d4;"></span> Ergonomi (18%)</div>
-                <div class="legend-chip"><span class="legend-color-dot" style="background: #10b981;"></span> Biologi (12%)</div>
-                <div class="legend-chip"><span class="legend-color-dot" style="background: #8b5cf6;"></span> Psikososial (10%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #ef4444;"></span> Kimia (35%)
+                </div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #f59e0b;"></span> Fisik (25%)
+                </div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #06b6d4;"></span> Ergonomi
+                  (18%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #10b981;"></span> Biologi
+                  (12%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #8b5cf6;"></span> Psikososial
+                  (10%)</div>
               </div>
             </div>
           </article>
@@ -1051,8 +1426,10 @@
         <article class="comparison-card">
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
             <div>
-              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Efektivitas Edukasi Budaya K3: Pre-Test vs Post-Test</h3>
-              <p style="font-size: 0.85rem;">Studi Pengabdian Masyarakat SMAN 3 Bone (Institut Batari Toja Bone, 2025)</p>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Efektivitas Edukasi Budaya K3: Pre-Test vs
+                Post-Test</h3>
+              <p style="font-size: 0.85rem;">Studi Pengabdian Masyarakat SMAN 3 Bone (Institut Batari Toja Bone, 2025)
+              </p>
             </div>
             <div style="display: flex; gap: 1rem; font-size: 0.8rem; font-weight: 600;">
               <div style="display: flex; align-items: center; gap: 0.4rem;">
@@ -1075,7 +1452,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#rambu-k3" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>Simbol GHS & Rambu K3</span>
@@ -1086,7 +1465,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>Audit Mandiri & Kuis K3</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -1101,7 +1482,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -1115,7 +1498,8 @@
           <span class="badge badge-emerald">Alat Praktis Interaktif</span>
           <h2 class="section-title">Audit Mandiri K3 Lab & Kuis Pemahaman</h2>
           <p class="section-subtitle">
-            Gunakan instrumen interaktif di bawah ini untuk mengaudit kesiapsiagaan keselamatan laboratorium Anda secara real-time dan uji pemahaman K3 Anda.
+            Gunakan instrumen interaktif di bawah ini untuk mengaudit kesiapsiagaan keselamatan laboratorium Anda secara
+            real-time dan uji pemahaman K3 Anda.
           </p>
         </div>
 
@@ -1124,58 +1508,69 @@
           <article class="tool-card">
             <span class="badge badge-cyan">Kalkulator Kesiapsiagaan</span>
             <h3>Audit Mandiri K3 Laboratorium</h3>
-            <p class="tool-desc">Centang daftar periksa (checklist) di bawah ini sesuai ketersediaan sarana dan kepatuhan prosedur di fasilitas laboratorium Anda:</p>
+            <p class="tool-desc">Centang daftar periksa (checklist) di bawah ini sesuai ketersediaan sarana dan
+              kepatuhan prosedur di fasilitas laboratorium Anda:</p>
 
             <div class="checklist-container">
               <label class="check-item">
                 <input type="checkbox" class="audit-check" checked>
-                <span class="check-item-text">Tersedia denah jalur evakuasi dan pintu keluar darurat tidak terhalang barang.</span>
+                <span class="check-item-text">Tersedia denah jalur evakuasi dan pintu keluar darurat tidak terhalang
+                  barang.</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check" checked>
-                <span class="check-item-text">Semua botol pereaksi kimia memiliki label identitas dan simbol bahaya GHS yang jelas.</span>
+                <span class="check-item-text">Semua botol pereaksi kimia memiliki label identitas dan simbol bahaya GHS
+                  yang jelas.</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check" checked>
-                <span class="check-item-text">Tersedia unit pencuci mata (eyewash station) dan safety shower dengan tekanan air baik.</span>
+                <span class="check-item-text">Tersedia unit pencuci mata (eyewash station) dan safety shower dengan
+                  tekanan air baik.</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check" checked>
-                <span class="check-item-text">Alat Pemadam Api Ringan (APAR) dalam kondisi siap pakai dan belum melewati masa kadaluarsa.</span>
+                <span class="check-item-text">Alat Pemadam Api Ringan (APAR) dalam kondisi siap pakai dan belum melewati
+                  masa kadaluarsa.</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check" checked>
-                <span class="check-item-text">Kewajiban penggunaan APD lengkap (jas lab berkancing, goggle, sarung tangan, sepatu tertutup).</span>
+                <span class="check-item-text">Kewajiban penggunaan APD lengkap (jas lab berkancing, goggle, sarung
+                  tangan, sepatu tertutup).</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check" checked>
-                <span class="check-item-text">Pemisahan limbah cair organik, asam pekat, dan wadah jarum/benda tajam (sharp container).</span>
+                <span class="check-item-text">Pemisahan limbah cair organik, asam pekat, dan wadah jarum/benda tajam
+                  (sharp container).</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check">
-                <span class="check-item-text">Lemari asam (fume hood) terkalibrasi dan memiliki daya hisap udara sesuai standar keselamatan.</span>
+                <span class="check-item-text">Lemari asam (fume hood) terkalibrasi dan memiliki daya hisap udara sesuai
+                  standar keselamatan.</span>
               </label>
 
               <label class="check-item">
                 <input type="checkbox" class="audit-check">
-                <span class="check-item-text">Kotak P3K lengkap dengan kassa steril, plester, larutan povidone iodine, dan catatan pemakaian.</span>
+                <span class="check-item-text">Kotak P3K lengkap dengan kassa steril, plester, larutan povidone iodine,
+                  dan catatan pemakaian.</span>
               </label>
             </div>
 
             <div class="audit-result-box">
               <div>
-                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Skor Kesiapsiagaan:</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Skor
+                  Kesiapsiagaan:</div>
                 <div id="auditScoreNum" class="audit-score-num">75%</div>
                 <span id="auditScoreBadge" class="badge badge-emerald">Cukup Baik</span>
               </div>
               <div style="max-width: 55%; font-size: 0.8rem; color: var(--text-secondary);" id="auditScoreNote">
-                Laboratorium Anda telah memenuhi sebagian besar standar K3. Lengkapi sisa poin untuk mencapai standar ideal 96.74%.
+                Laboratorium Anda telah memenuhi sebagian besar standar K3. Lengkapi sisa poin untuk mencapai standar
+                ideal 96.74%.
               </div>
             </div>
           </article>
@@ -1184,7 +1579,8 @@
           <article class="tool-card">
             <span class="badge badge-amber">Uji Pengetahuan</span>
             <h3>Kuis Interaktif K3 Laboratorium</h3>
-            <p class="tool-desc">Uji ketepatan Anda dalam menyikapi skenario nyata dan dasar teori K3 dari jurnal ilmiah:</p>
+            <p class="tool-desc">Uji ketepatan Anda dalam menyikapi skenario nyata dan dasar teori K3 dari jurnal
+              ilmiah:</p>
 
             <div id="quizBoxContainer" class="quiz-box">
               <!-- Dynamically populated via app.js -->
@@ -1196,7 +1592,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#grafik-data" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>Grafik & Riset Data</span>
@@ -1207,7 +1605,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>Repositori Jurnal Ilmiah</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -1222,7 +1622,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -1236,7 +1638,8 @@
           <span class="badge badge-emerald">Kajian Akademik & Pustaka</span>
           <h2 class="section-title">Repositori Jurnal Ilmiah Referensi</h2>
           <p class="section-subtitle">
-            Seluruh data, persentase kepatuhan, SOP, serta pembahasan potensi bahaya di website ini bersumber langsung dari 3 publikasi artikel jurnal ilmiah nasional terakreditasi:
+            Seluruh data, persentase kepatuhan, SOP, serta pembahasan potensi bahaya di website ini bersumber langsung
+            dari 3 publikasi artikel jurnal ilmiah nasional terakreditasi:
           </p>
         </div>
 
@@ -1248,7 +1651,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#toolkit-k3" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>Audit Mandiri & Kuis K3</span>
@@ -1259,7 +1664,9 @@
                 <small>Materi Selanjutnya</small>
                 <span>Tim Penyusun Proyek</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -1274,7 +1681,9 @@
         <!-- Top Nav & Breadcrumb -->
         <div class="page-top-nav">
           <a href="#beranda" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
             <span>Kembali ke Beranda</span>
           </a>
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
@@ -1288,7 +1697,8 @@
           <span class="badge badge-cyan">Kolaborasi & Pengembang</span>
           <h2 class="section-title">Tim Penyusun Proyek K3L</h2>
           <p class="section-subtitle">
-            Website edukasi statis K3 ini dikembangkan sebagai karya tugas bersama komprehensif dalam mengintegrasikan riset keselamatan kerja ilmiah ke dalam format antarmuka digital modern.
+            Website edukasi statis K3 ini dikembangkan sebagai karya tugas bersama komprehensif dalam mengintegrasikan
+            riset keselamatan kerja ilmiah ke dalam format antarmuka digital modern.
           </p>
         </div>
 
@@ -1297,28 +1707,32 @@
             <div class="team-avatar-box">A</div>
             <h3 class="team-name">Angelita Widianti</h3>
             <div class="team-role">Researcher</div>
-            <p class="team-desc">Bertanggung jawab atas riset pustaka jurnal keselamatan kerja, analisis data empiris kepatuhan K3, dan studi kasus laboratorium.</p>
+            <p class="team-desc">Bertanggung jawab atas riset pustaka jurnal keselamatan kerja, analisis data empiris
+              kepatuhan K3, dan studi kasus laboratorium.</p>
           </article>
 
           <article class="team-card">
             <div class="team-avatar-box" style="background: linear-gradient(135deg, #06b6d4, #0284c7);">B</div>
             <h3 class="team-name">Bintang Dandy Nicky Joan</h3>
             <div class="team-role">Website Designer</div>
-            <p class="team-desc">Merancang konsep antarmuka pengguna (UI/UX), tata letak visual modern, sistem desain responsif, serta palet warna dark & light mode.</p>
+            <p class="team-desc">Merancang konsep antarmuka pengguna (UI/UX), tata letak visual modern, sistem desain
+              responsif, serta palet warna dark & light mode.</p>
           </article>
 
           <article class="team-card">
             <div class="team-avatar-box" style="background: linear-gradient(135deg, #f59e0b, #d97706);">M</div>
             <h3 class="team-name">Maya Salsabila</h3>
             <div class="team-role">Researcher</div>
-            <p class="team-desc">Mengkaji 5 klasifikasi potensi bahaya Dr. Suma'mur, standar alat pelindung diri (APD), simbol bahaya GHS, serta kerangka regulasi K3.</p>
+            <p class="team-desc">Mengkaji 5 klasifikasi potensi bahaya Dr. Suma'mur, standar alat pelindung diri (APD),
+              simbol bahaya GHS, serta kerangka regulasi K3.</p>
           </article>
 
           <article class="team-card">
             <div class="team-avatar-box" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">F</div>
             <h3 class="team-name">Muhammad Fery Ardiansyah</h3>
             <div class="team-role">Programming</div>
-            <p class="team-desc">Mengembangkan arsitektur web interaktif, logika kalkulator audit kesiapsiagaan lab, kuis pengetahuan K3, dan visualisasi grafik data.</p>
+            <p class="team-desc">Mengembangkan arsitektur web interaktif, logika kalkulator audit kesiapsiagaan lab,
+              kuis pengetahuan K3, dan visualisasi grafik data.</p>
           </article>
         </div>
 
@@ -1326,7 +1740,9 @@
         <div class="page-bottom-nav">
           <div class="page-nav-arrows">
             <a href="#jurnal" class="page-nav-btn prev-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
               <div>
                 <small>Materi Sebelumnya</small>
                 <span>Repositori Jurnal Referensi</span>
@@ -1337,7 +1753,9 @@
                 <small>Kembali ke Utama</small>
                 <span>Beranda Portal SafeSphere</span>
               </div>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -1354,12 +1772,15 @@
         <div class="footer-brand">
           <a href="#beranda" class="brand-logo">
             <div class="brand-icon-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
             </div>
             <span class="brand-text">SafeSphere <span>K3L</span></span>
           </a>
           <p>
-            Portal Edukasi Keselamatan, Kesehatan Kerja dan Lingkungan yang didedikasikan untuk membangun budaya zero accident dan keselamatan laboratorium berbasis bukti ilmiah.
+            Portal Edukasi Keselamatan, Kesehatan Kerja dan Lingkungan yang didedikasikan untuk membangun budaya zero
+            accident dan keselamatan laboratorium berbasis bukti ilmiah.
           </p>
         </div>
 
@@ -1413,7 +1834,10 @@
   <div id="globalModal" class="modal-backdrop" aria-modal="true" role="dialog">
     <div class="modal-dialog">
       <button class="modal-close-btn" type="button" onclick="closeGlobalModal()" aria-label="Tutup Jendela Modal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </button>
       <div id="modalContent">
         <!-- Injected via JavaScript -->
@@ -1421,7 +1845,32 @@
     </div>
   </div>
 
+  <!-- ===================================================================
+       PAGE TRANSITION LOADING OVERLAY (Kelompok 1 is Ready)
+       =================================================================== -->
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="loader-spinner-wrap">
+        <div class="loader-ring"></div>
+        <div class="loader-icon-center">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
+      </div>
+      <div class="loader-text-group">
+        <h3 class="loader-title">Kelompok 1 <span class="loader-status">is Ready</span></h3>
+        <p class="loader-sub">Menyiapkan materi keselamatan kerja...</p>
+      </div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Main JavaScript File -->
   <script src="app.js"></script>
 </body>
+
 </html>
