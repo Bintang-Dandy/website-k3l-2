@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SafeSphere K3 - Portal Edukasi & Pusat Informasi Keselamatan, Kesehatan Kerja dan Lingkungan (K3L) Berbasis Riset Jurnal Ilmiah Terpercaya">
+  <title>SafeSphere K3 | Portal Ilmiah Keselamatan & Kesehatan Kerja</title>
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       HEADER & NAVIGATION
+       =================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <a href="#beranda" class="brand-logo" aria-label="SafeSphere K3 Homepage">
+          <div class="brand-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <span class="brand-text">SafeSphere <span>K3L</span></span>
+        </a>
+
+        <div class="nav-menu">
+          <a href="#beranda" class="nav-link active">Beranda</a>
+          <a href="#urgensi" class="nav-link">Regulasi</a>
+          <a href="#standar-lab" class="nav-link">Standar Lab</a>
+          <a href="#klasifikasi-bahaya" class="nav-link">Bahaya & APD</a>
+          <a href="#grafik-data" class="nav-link">Riset</a>
+          <div class="nav-dropdown">
+            <button class="nav-link nav-dropdown-btn" type="button">
+              Lainnya
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="#rambu-k3" class="nav-dropdown-item">Rambu GHS</a>
+              <a href="#toolkit-k3" class="nav-dropdown-item">Audit & Kuis</a>
+              <a href="#jurnal" class="nav-dropdown-item">Jurnal Ilmiah</a>
+              <a href="#tim" class="nav-dropdown-item">Tim Penyusun</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Ganti Tema Gelap/Terang" title="Ganti Tema">
+            <span id="themeIcon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+          
+          <a href="#toolkit-k3" class="btn btn-primary btn-sm">Uji Lab Anda</a>
+
+          <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="Buka Menu Navigasi">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileNav" class="mobile-nav">
+    <a href="#beranda" class="nav-link">Beranda</a>
+    <a href="#urgensi" class="nav-link">Urgensi & Regulasi K3L</a>
+    <a href="#standar-lab" class="nav-link">7 Standar K3 Laboratorium</a>
+    <a href="#klasifikasi-bahaya" class="nav-link">Klasifikasi Bahaya & APD</a>
+    <a href="#rambu-k3" class="nav-link">Katalog Simbol Bahaya GHS</a>
+    <a href="#grafik-data" class="nav-link">Visualisasi Grafik Data</a>
+    <a href="#toolkit-k3" class="nav-link">Audit K3 & Kuis Interaktif</a>
+    <a href="#jurnal" class="nav-link">Repositori Jurnal Referensi</a>
+    <a href="#tim" class="nav-link">Tim Penyusun</a>
+  </div>
+
+  <main>
+    <!-- ===================================================================
+         HERO SECTION
+         =================================================================== -->
+    <section id="beranda" class="hero">
+      <div class="hero-glow-bg"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="badge badge-emerald">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Edukasi K3 Berbasis Riset Jurnal Ilmiah
+            </span>
+            <h1>
+              Mewujudkan Budaya <span class="gradient-text">Keselamatan Kerja</span> & Lingkungan Sehat
+            </h1>
+            <p class="hero-description">
+              Platform referensi komprehensif Keselamatan, Kesehatan Kerja, dan Lingkungan (K3L). Dirangkum dari publikasi ilmiah tentang urgensi K3, audit 7 indikator keselamatan laboratorium kimia farmasi, serta pembudayaan K3 sejak dini di institusi pendidikan.
+            </p>
+            <div class="hero-actions">
+              <a href="#standar-lab" class="btn btn-primary">
+                <span>Pelajari 7 Standar Lab</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <a href="#grafik-data" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+                <span>Lihat Data & Grafik</span>
+              </a>
+            </div>
+
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Standar UU No. 1 / 1970</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Uji Signifikansi (p = 0.000)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>5 Klasifikasi Dr. Suma'mur</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-card">
+              <img src="assets/images/hero-lab.jpg" alt="Laboratorium Modern Berstandar K3 dengan APD Lengkap dan Sistem Monitoring">
+              <div class="hero-badge-overlay">
+                <div>
+                  <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--brand-emerald-light); font-weight: 700;">Standar Operasional</div>
+                  <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">Good Laboratory Practice & K3L</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 1.25rem; font-weight: 800; color: #34d399;">ISO 5</div>
+                  <div style="font-size: 0.7rem; color: #94a3b8;">Cleanroom Standard</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-kpi-chip">
+              <div style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--brand-emerald-glow); display: flex; align-items: center; justify-content: center; color: var(--brand-emerald);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); line-height: 1.1;">96.74%</div>
+                <div style="font-size: 0.725rem; color: var(--text-muted);">Tingkat Kepatuhan K3 Lab</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric KPI Cards Bar -->
+        <div class="stats-bar">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Indeks Kepatuhan K3</span>
+              <span class="stat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </span>
+            </div>
+            <div class="stat-number">96.74%</div>
+            <div class="stat-desc">Rata-rata kepatuhan praktikum mahasiswa farmasi</div>
+          </article>
+
+          <article class="stat-card stat-cyan">
+            <div class="stat-top">
+              <span class="stat-label">Indikator Teruji</span>
+              <span class="stat-icon" style="color: var(--accent-cyan);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </span>
+            </div>
+            <div class="stat-number">7 Standar</div>
+            <div class="stat-desc">Keamanan kimia, umum, limbah, darurat, APD, dll</div>
+          </article>
+
+          <article class="stat-card stat-amber">
+            <div class="stat-top">
+              <span class="stat-label">Klasifikasi Bahaya</span>
+              <span class="stat-icon" style="color: var(--accent-amber);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </span>
+            </div>
+            <div class="stat-number">5 Faktor</div>
+            <div class="stat-desc">Fisik, Kimia, Biologi, Ergonomi, & Psikologi</div>
+          </article>
+
+          <article class="stat-card stat-red">
+            <div class="stat-top">
+              <span class="stat-label">Uji Signifikansi</span>
+              <span class="stat-icon" style="color: var(--accent-red);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </span>
+            </div>
+            <div class="stat-number">p = 0.000</div>
+            <div class="stat-desc">SPSS 26 t-test (p &lt; 0.05, Ho ditolak signifikan)</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 1: URGENSI & REGULASI K3L
+         =================================================================== -->
+    <section id="urgensi" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-emerald">Landasan & Esensi</span>
+          <h2 class="section-title">Urgensi Keselamatan, Kesehatan Kerja & Lingkungan (K3L)</h2>
+          <p class="section-subtitle">
+            Berdasarkan telaah editorial Jurnal Keselamatan, Kesehatan Kerja dan Lingkungan (JK3L) oleh Aulia Rahman (2020), K3L merupakan pilar esensial dalam setiap denyut aktivitas manusia. Pengabaian terhadap salah satu unsurnya berakibat fatal bagi pekerja, aset, maupun masyarakat.
+          </p>
+        </div>
+
+        <!-- 3 Pilar K3L -->
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-icon-box icon-emerald">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>1. Keselamatan Kerja (Safety)</h3>
+            <p>
+              Berfokus pada perlindungan fisik tenaga kerja dari risiko kecelakaan langsung saat menjalankan tugas operasional, pekerjaan proyek, maupun praktikum laboratorium.
+            </p>
+            <ul class="pillar-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pencegahan insiden luka bakar & goresan</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Eliminasi bahaya ledakan & kebakaran</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Penyediaan sarana proteksi diri (APD)</li>
+            </ul>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon-box icon-cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3>2. Kesehatan Kerja (Health)</h3>
+            <p>
+              Kajian mendalam terhadap pencegahan timbulnya Penyakit Akibat Kerja (PAK), baik berupa efek jangka pendek (pusing, mual, alergi) maupun gangguan fatal kronis.
+            </p>
+            <ul class="pillar-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Proteksi paparan zat karsinogenik</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pencegahan tuli akibat kebisingan mesin</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Mitigasi serangan jantung & stres kerja</li>
+            </ul>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon-box icon-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h3>3. Kesehatan Lingkungan (Environment)</h3>
+            <p>
+              Memastikan seluruh sisa aktivitas kerja, uap beracun, dan limbah kimia tidak dibuang sembarangan ke tanah, air, atau udara yang dapat merusak biosfer alam.
+            </p>
+            <ul class="pillar-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pengelolaan limbah B3 berstandar amdal</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pengendalian emisi uap korosif di lemari asam</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Menjamin keselamatan masyarakat sekitar</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Risk Spectrum Interactive Banner -->
+        <div class="risk-spectrum">
+          <div class="spectrum-header">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.35rem;">Spektrum Dampak Kelalaian K3L Bagi Manusia</h3>
+            <p style="font-size: 0.875rem;">Seperti dipaparkan dalam editorial JK3L, konsekuensi risiko merentang dari tingkat cidera ringan hingga kecacatan permanen dan kehilangan nyawa:</p>
+          </div>
+          <div class="spectrum-flow">
+            <div class="spectrum-step step-ringan">
+              <h4>Luka Ringan & Pusing</h4>
+              <p>Luka gores benda tajam, iritasi mata ringan akibat uap zat volatil, atau pusing sesaat karena sirkulasi minim.</p>
+            </div>
+            <div class="spectrum-step step-sedang">
+              <h4>Luka Bakar Kimia</h4>
+              <p>Percikan asam/basa kuat melukai epidermis kulit, dermatitis kontak kronis, dan sesak napas akut.</p>
+            </div>
+            <div class="spectrum-step step-berat">
+              <h4>Patah Tulang & Tuli</h4>
+              <p>Trauma fisik jatuh dari ketinggian, tertimpa alat berat, dan kerusakan saraf pendengaran permanen.</p>
+            </div>
+            <div class="spectrum-step step-fatal">
+              <h4>Serangan Jantung & Kematian</h4>
+              <p>Keracunan uap sianida, sengatan listrik tegangan tinggi, ledakan reaktor lab, dan serangan jantung fatal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: 7 STANDAR K3 LABORATORIUM KIMIA
+         =================================================================== -->
+    <section id="standar-lab" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-cyan">Riset Empiris DIII Farmasi Palembang</span>
+          <h2 class="section-title">7 Indikator Evaluasi K3 Laboratorium Kimia</h2>
+          <p class="section-subtitle">
+            Berdasarkan penelitian kuantitatif Lilis Maryanti, Yuliani, & Metha Vionari (Gojhes 2025) terhadap 100 responden mahasiswa praktikum di Kota Palembang. Rata-rata kepatuhan mencapai <strong>96.74%</strong> dengan signifikansi statistik (p = 0.000).
+          </p>
+        </div>
+
+        <!-- 7 Indicators Grid Cards -->
+        <div id="indicatorsGrid" class="indicators-grid">
+          <!-- Dynamic cards injected via app.js -->
+        </div>
+
+        <!-- Historical Accidents in Labs Banner -->
+        <div class="incidents-wrapper">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-red)" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <h3 style="font-size: 1.25rem;">Catatan Kasus Insiden Laboratorium Nyata (Latar Belakang Riset)</h3>
+          </div>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem;">
+            Penelitian ini dilatarbelakangi fakta bahwa kecerobohan dan ketidakpatuhan SOP di laboratorium dapat menimbulkan bencana mematikan:
+          </p>
+          <div class="incidents-grid">
+            <div class="incident-item">
+              <h4>Ledakan Lab Kampus di China (2018)</h4>
+              <p>Terjadi ledakan dahsyat di laboratorium universitas pada 26 Agustus 2018 yang menewaskan 3 orang mahasiswa akibat ketidakpahaman sifat reaktif bahan kimia.</p>
+            </div>
+            <div class="incident-item">
+              <h4>Ledakan Toples Pemurnian FFUI (2015)</h4>
+              <p>Ledakan toples pemurnian di Gedung Penelitian Apotek Farmasi UI Depok mengakibatkan 14 korban luka-luka (12 luka ringan dan 2 luka berat).</p>
+            </div>
+            <div class="incident-item">
+              <h4>Kebakaran Lab Kimia UNDIP (2020)</h4>
+              <p>Kebakaran ruang laboratorium Fakultas Teknik Kimia Universitas Diponegoro pada 27 Agustus 2020 mengakibatkan seorang mahasiswa menderita luka bakar serius.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: 5 KLASIFIKASI BAHAYA SUMA'MUR & BUDAYA K3
+         =================================================================== -->
+    <section id="klasifikasi-bahaya" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-amber">Konsep Dr. Suma'mur P.K.</span>
+          <h2 class="section-title">5 Klasifikasi Potensi Bahaya & Budaya K3 Edukasi</h2>
+          <p class="section-subtitle">
+            Mengacu pada publikasi Pengabdian kepada Masyarakat (PKM) Institut Batari Toja Bone di SMAN 3 Bone (Rahmadani et al., 2025). Tidak ada lingkungan laboratorium yang benar-benar bebas dari potensi bahaya.
+          </p>
+        </div>
+
+        <!-- Hazard Classification Tabs -->
+        <div class="hazard-tabs">
+          <button class="tab-btn active" data-tab="fisik" type="button">Faktor Bahaya Fisik</button>
+          <button class="tab-btn" data-tab="kimia" type="button">Faktor Bahaya Kimia</button>
+          <button class="tab-btn" data-tab="biologi" type="button">Faktor Bahaya Biologi</button>
+          <button class="tab-btn" data-tab="ergonomi" type="button">Faktor Bahaya Ergonomi</button>
+          <button class="tab-btn" data-tab="psikologi" type="button">Faktor Bahaya Psikologi</button>
+        </div>
+
+        <!-- Pane: Fisik -->
+        <div id="pane-fisik" class="hazard-content-pane active">
+          <div class="hazard-detail-grid">
+            <div class="hazard-info">
+              <span class="badge badge-amber">Klasifikasi 1</span>
+              <h3>Bahaya Faktor Fisik di Laboratorium</h3>
+              <p>
+                Merupakan sumber bahaya yang berasal dari energi fisik atau kondisi mekanik di lingkungan kerja yang dapat menyebabkan kerusakan fisik pada jaringan tubuh atau kecelakaan mekanis.
+              </p>
+              <div class="hazard-points">
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <div><strong>Sengatan Listrik:</strong> Korsleting stopkontak, kabel terkelupas dekat meja praktikum basah, atau instrumen centrifuge tanpa pembumian (grounding).</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <div><strong>Tekanan Panas & Radiasi:</strong> Pemanas bunsen terbuka, microwave destruksi, autoklaf bertekanan tinggi, dan sinar UV transluminator.</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+                  <div><strong>Pencahayaan & Kebisingan:</strong> Ruang praktikum temaram yang memicu kesalahan pembacaan buret serta dengung pompa vakum berjam-jam.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hazard-solution-card">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tindakan Pencegahan & Mitigasi Fisik:
+              </h4>
+              <ul>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pemeriksaan rutin kabel listrik dan instalasi sekring otomatis (MCB).</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Memastikan sarung tangan tahan panas (heat-resistant) saat mengangkat labu panas.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Memasang peredam getaran pada mesin centrifuge dan menjaga ventilasi penerangan di atas 300 lux.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane: Kimia -->
+        <div id="pane-kimia" class="hazard-content-pane">
+          <div class="hazard-detail-grid">
+            <div class="hazard-info">
+              <span class="badge badge-red">Klasifikasi 2</span>
+              <h3>Bahaya Faktor Kimia</h3>
+              <p>
+                Meliputi semua bentuk bahan kimia beracun, korosif, reaktif, mudah meledak, karsinogenik, atau mutagenik yang dapat masuk ke tubuh melalui inhalasi uap, ingesti, atau penetrasi kulit.
+              </p>
+              <div class="hazard-points">
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4l-4 4 2 2-2 2 4 4"></path><path d="M4 14l3-3 2 2"></path></svg>
+                  <div><strong>Korosif & Asam Kuat:</strong> H2SO4 pekat, HCl pekat, NaOH yang seketika merusak protein kulit dan kornea mata.</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                  <div><strong>Pelarut Mudah Terbakar:</strong> Etanol, eter, heksana yang memiliki titik nyala (flash point) sangat rendah di bawah suhu ruang.</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"></path></svg>
+                  <div><strong>Uap Toksik & Karsinogen:</strong> Benzena, formaldehida, uap kloroform yang merusak hepar dan sumsum tulang dalam jangka panjang.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hazard-solution-card">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tindakan Pencegahan & Mitigasi Kimia:
+              </h4>
+              <ul>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Bekerja di lemari asam (fume hood) dengan aliran laminar saat memindahkan cairan beruap.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Pelabelan botol pereaksi secara jelas dengan simbol bahaya GHS dan tanggal kadaluarsa.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Menyiapkan spill kit (pasir, natrium bikarbonat) untuk menetralkan tumpahan asam seketika.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane: Biologi -->
+        <div id="pane-biologi" class="hazard-content-pane">
+          <div class="hazard-detail-grid">
+            <div class="hazard-info">
+              <span class="badge badge-emerald">Klasifikasi 3</span>
+              <h3>Bahaya Faktor Biologi (Biohazard)</h3>
+              <p>
+                Risiko infeksi dan kontaminasi dari mikroorganisme patogen (virus, bakteri, parasit, jamur), kultur sel, serta hewan uji atau produk biologis seperti darah dan cairan tubuh.
+              </p>
+              <div class="hazard-points">
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                  <div><strong>Bakteri & Virus Patogen:</strong> Paparan kultur kuman seperti Staphylococcus aureus, Salmonella, atau virus influenza.</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="4"></circle></svg>
+                  <div><strong>Aerosol Bio-aerosol:</strong> Pembentukan tetesan mikroskopis saat proses pengocokan (vortexing) atau pipetasi kasar.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hazard-solution-card">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tindakan Pencegahan & Mitigasi Biologi:
+              </h4>
+              <ul>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Penggunaan Biosafety Cabinet (BSC) Kelas II berfilter HEPA.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sterilisasi panas basah autoklaf pada suhu 121°C selama 15 menit sebelum pembuangan cawan petri.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Desinfeksi rutin meja kerja menggunakan alkohol 70% atau larutan klorin aktif.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane: Ergonomi -->
+        <div id="pane-ergonomi" class="hazard-content-pane">
+          <div class="hazard-detail-grid">
+            <div class="hazard-info">
+              <span class="badge badge-cyan">Klasifikasi 4</span>
+              <h3>Bahaya Faktor Ergonomi</h3>
+              <p>
+                Ketidaksesuaian antara postur tubuh manusia, desain kursi/meja praktikum, serta aktivitas fisik berulang yang memicu kelainan otot rangka (Musculoskeletal Disorders / MSDs).
+              </p>
+              <div class="hazard-points">
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-8m0 0l-3 3m3-3l3 3"></path></svg>
+                  <div><strong>Postur Membungkuk Berulang:</strong> Menatap lensa mikroskop selama berjam-jam tanpa sandaran leher yang proporsional.</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                  <div><strong>Gerakan Repetitif Jemari:</strong> Menekan mikropipet ratusan kali saat preparasi sampel PCR atau titrasi manual berkepanjangan.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hazard-solution-card">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tindakan Pencegahan & Mitigasi Ergonomi:
+              </h4>
+              <ul>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Mengatur ketinggian kursi putar laboratorium agar punggung tegak 90 derajat.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Istirahat mikro (micro-breaks) setiap 45 menit untuk peregangan otot leher, bahu, dan pergelangan tangan.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Menggunakan mikropipet elektronik bermuatan motorik ringan untuk mengurangi beban jemari.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane: Psikologi -->
+        <div id="pane-psikologi" class="hazard-content-pane">
+          <div class="hazard-detail-grid">
+            <div class="hazard-info">
+              <span class="badge badge-purple">Klasifikasi 5</span>
+              <h3>Bahaya Faktor Psikososial</h3>
+              <p>
+                Beban kognitif dan tekanan mental dalam lingkungan kerja yang memicu stres berlebih, hilangnya konsentrasi, kelelahan, dan kecerobohan yang memicu insiden kecelakaan.
+              </p>
+              <div class="hazard-points">
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 15h8"></path><circle cx="9" cy="9" r="1"></circle><circle cx="15" cy="9" r="1"></circle></svg>
+                  <div><strong>Kelelahan & Hilang Fokus:</strong> Praktikum maraton hingga larut malam tanpa jeda yang menyebabkan tangan gemetar saat mereaksikan zat.</div>
+                </div>
+                <div class="hazard-point-item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                  <div><strong>Tekanan Waktu & Tenggat Ujian:</strong> Terburu-buru mencampur reagen tanpa membaca label dengan teliti karena mengejar target waktu.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hazard-solution-card">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tindakan Pencegahan & Mitigasi Psikososial:
+              </h4>
+              <ul>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Penjadwalan giliran kerja/praktikum yang manusiawi dan proporsional.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Briefing keselamatan (Safety Talk) selama 5 menit sebelum praktikum dimulai guna mengondisikan ketenangan pikiran.</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Menciptakan budaya saling mengingatkan antar rekan kerja tanpa rasa segan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- APD Showcase Component -->
+        <div class="apd-showcase-box">
+          <div class="apd-grid">
+            <div>
+              <span class="badge badge-emerald">Perlengkapan Standar K3</span>
+              <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Standar Alat Pelindung Diri (APD) Wajib</h3>
+              <p style="font-size: 0.9rem; margin-bottom: 1.75rem;">
+                Sebagaimana diamanatkan dalam Jurnal SMAN 3 Bone dan Jurnal Farmasi Palembang, APD adalah garis pertahanan terakhir (last line of defense) yang mutlak wajib digunakan sebelum menginjakkan kaki di ruang laboratorium:
+              </p>
+
+              <div class="apd-items-list">
+                <div class="apd-item-pill">
+                  <div class="apd-item-pill-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="apd-item-pill-title">Jas Laboratorium</div>
+                    <div class="apd-item-pill-sub">Bahan 100% katun, berkancing rapat, lengan panjang</div>
+                  </div>
+                </div>
+
+                <div class="apd-item-pill">
+                  <div class="apd-item-pill-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="4"></circle><circle cx="18" cy="12" r="4"></circle><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                  </div>
+                  <div>
+                    <div class="apd-item-pill-title">Safety Goggles</div>
+                    <div class="apd-item-pill-sub">Kacamata tahan percikan zat korosif & partikel tajam</div>
+                  </div>
+                </div>
+
+                <div class="apd-item-pill">
+                  <div class="apd-item-pill-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v7"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path></svg>
+                  </div>
+                  <div>
+                    <div class="apd-item-pill-title">Sarung Tangan Nitril</div>
+                    <div class="apd-item-pill-sub">Tahan tembus pelarut kimia organik & kuman biologis</div>
+                  </div>
+                </div>
+
+                <div class="apd-item-pill">
+                  <div class="apd-item-pill-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M8 12h8"></path></svg>
+                  </div>
+                  <div>
+                    <div class="apd-item-pill-title">Masker Respirator N95</div>
+                    <div class="apd-item-pill-sub">Filtrasi uap debu mikro & gas beracun volatil</div>
+                  </div>
+                </div>
+
+                <div class="apd-item-pill" style="grid-column: span 2;">
+                  <div class="apd-item-pill-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  </div>
+                  <div>
+                    <div class="apd-item-pill-title">Sepatu Pelindung Tertutup (Safety Shoes)</div>
+                    <div class="apd-item-pill-sub">Menutup seluruh punggung kaki dari tumpahan zat asam pekat dan pecahan kaca (dilarang sandal)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="apd-image-wrap">
+              <img src="assets/images/apd-lab.jpg" alt="Foto Asli Peralatan Alat Pelindung Diri K3 Laboratorium: Jas Lab, Kacamata Goggle, Masker, Sarung Tangan, dan Sepatu Safety">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: SIMBOL BAHAYA GHS & RAMBU K3
+         =================================================================== -->
+    <section id="rambu-k3" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-red">Identifikasi Visual Standar Global</span>
+          <h2 class="section-title">Katalog Simbol Bahaya Kimia (GHS) & Rambu K3</h2>
+          <p class="section-subtitle">
+            Pelabelan bahan kimia dan penanda peringatan merupakan instrumen penting pencegahan bencana di laboratorium. Klik setiap kartu untuk mempelajari karakteristik, contoh bahan kimia, serta prosedur penanganan daruratnya.
+          </p>
+        </div>
+
+        <div class="signs-controls">
+          <button class="sign-filter-btn active" data-filter="all" type="button">Semua Rambu (9)</button>
+          <button class="sign-filter-btn" data-filter="kimia" type="button">Bahaya Kimia GHS</button>
+          <button class="sign-filter-btn" data-filter="biologi" type="button">Bahaya Hayati (Biohazard)</button>
+          <button class="sign-filter-btn" data-filter="wajib" type="button">Rambu Wajib (Mandatory)</button>
+          <button class="sign-filter-btn" data-filter="darurat" type="button">Rambu Evakuasi & Darurat</button>
+        </div>
+
+        <div id="signsGrid" class="signs-grid">
+          <!-- Dynamic Signs Rendered via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: GRAFIK & ANALISIS STATISTIK DATA K3
+         =================================================================== -->
+    <section id="grafik-data" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-cyan">Visualisasi Riset Empiris</span>
+          <h2 class="section-title">Analisis Statistik & Grafik Temuan Ilmiah</h2>
+          <p class="section-subtitle">
+            Kompilasi data kuantitatif dari penelitian K3 laboratorium DIII Farmasi Palembang dan hasil program edukasi pengabdian masyarakat SMAN 3 Bone.
+          </p>
+        </div>
+
+        <!-- 2 Column Chart Layout -->
+        <div class="charts-grid">
+          <!-- Chart 1: 7 Lab Indicators Bar Chart -->
+          <article class="chart-card">
+            <div class="chart-header">
+              <div>
+                <h3>Tingkat Kepatuhan 7 Indikator K3 Lab Kimia</h3>
+                <p>Survei kuantitatif 100 responden mahasiswa DIII Farmasi Palembang (SPSS 26)</p>
+              </div>
+              <span class="badge badge-emerald">Mean: 96.74%</span>
+            </div>
+            <div id="interactiveBarChart" class="interactive-bar-container">
+              <!-- Dynamically populated via app.js -->
+            </div>
+          </article>
+
+          <!-- Chart 2: Hazard Distribution Donut Chart -->
+          <article class="chart-card">
+            <div class="chart-header">
+              <div>
+                <h3>Distribusi Faktor Potensi Bahaya Kerja</h3>
+                <p>Proporsi klasifikasi bahaya kerja (Dr. Suma'mur P.K.)</p>
+              </div>
+              <span class="badge badge-amber">5 Kategori</span>
+            </div>
+
+            <div class="donut-chart-wrap">
+              <div class="donut-svg-container">
+                <svg width="190" height="190" viewBox="0 0 42 42">
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="var(--bg-secondary)" stroke-width="5"></circle>
+                  <!-- 1. Kimia (35%) -->
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#ef4444" stroke-width="5" stroke-dasharray="35 65" stroke-dashoffset="25"></circle>
+                  <!-- 2. Fisik (25%) -->
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#f59e0b" stroke-width="5" stroke-dasharray="25 75" stroke-dashoffset="90"></circle>
+                  <!-- 3. Ergonomi (18%) -->
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#06b6d4" stroke-width="5" stroke-dasharray="18 82" stroke-dashoffset="65"></circle>
+                  <!-- 4. Biologi (12%) -->
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#10b981" stroke-width="5" stroke-dasharray="12 88" stroke-dashoffset="47"></circle>
+                  <!-- 5. Psikologi (10%) -->
+                  <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="#8b5cf6" stroke-width="5" stroke-dasharray="10 90" stroke-dashoffset="35"></circle>
+                </svg>
+                <div class="donut-center-text">
+                  <div class="donut-center-num">100%</div>
+                  <div class="donut-center-label">Total Bahaya</div>
+                </div>
+              </div>
+
+              <div class="chart-legend">
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #ef4444;"></span> Kimia (35%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #f59e0b;"></span> Fisik (25%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #06b6d4;"></span> Ergonomi (18%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #10b981;"></span> Biologi (12%)</div>
+                <div class="legend-chip"><span class="legend-color-dot" style="background: #8b5cf6;"></span> Psikososial (10%)</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Comparison Chart: Pre-Test vs Post-Test SMAN 3 Bone -->
+        <article class="comparison-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Efektivitas Edukasi Budaya K3: Pre-Test vs Post-Test</h3>
+              <p style="font-size: 0.85rem;">Studi Pengabdian Masyarakat SMAN 3 Bone (Institut Batari Toja Bone, 2025)</p>
+            </div>
+            <div style="display: flex; gap: 1rem; font-size: 0.8rem; font-weight: 600;">
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span style="width: 12px; height: 12px; background: #64748b; border-radius: 3px;"></span>
+                <span>Sebelum Edukasi (Pre-Test)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span style="width: 12px; height: 12px; background: #10b981; border-radius: 3px;"></span>
+                <span>Sesudah Edukasi (Post-Test)</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="compBarsGrid" class="comp-bars-grid">
+            <!-- Injected via app.js -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: INTERACTIVE TOOLKIT (Kalkulator K3 & Kuis)
+         =================================================================== -->
+    <section id="toolkit-k3" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-emerald">Alat Praktis Interaktif</span>
+          <h2 class="section-title">Audit Mandiri K3 Lab & Kuis Pemahaman</h2>
+          <p class="section-subtitle">
+            Gunakan instrumen interaktif di bawah ini untuk mengaudit kesiapsiagaan keselamatan laboratorium Anda secara real-time dan uji pemahaman K3 Anda.
+          </p>
+        </div>
+
+        <div class="toolkit-grid">
+          <!-- Tool 1: Self-Audit Checklist -->
+          <article class="tool-card">
+            <span class="badge badge-cyan">Kalkulator Kesiapsiagaan</span>
+            <h3>Audit Mandiri K3 Laboratorium</h3>
+            <p class="tool-desc">Centang daftar periksa (checklist) di bawah ini sesuai ketersediaan sarana dan kepatuhan prosedur di fasilitas laboratorium Anda:</p>
+
+            <div class="checklist-container">
+              <label class="check-item">
+                <input type="checkbox" class="audit-check" checked>
+                <span class="check-item-text">Tersedia denah jalur evakuasi dan pintu keluar darurat tidak terhalang barang.</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check" checked>
+                <span class="check-item-text">Semua botol pereaksi kimia memiliki label identitas dan simbol bahaya GHS yang jelas.</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check" checked>
+                <span class="check-item-text">Tersedia unit pencuci mata (eyewash station) dan safety shower dengan tekanan air baik.</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check" checked>
+                <span class="check-item-text">Alat Pemadam Api Ringan (APAR) dalam kondisi siap pakai dan belum melewati masa kadaluarsa.</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check" checked>
+                <span class="check-item-text">Kewajiban penggunaan APD lengkap (jas lab berkancing, goggle, sarung tangan, sepatu tertutup).</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check" checked>
+                <span class="check-item-text">Pemisahan limbah cair organik, asam pekat, dan wadah jarum/benda tajam (sharp container).</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check">
+                <span class="check-item-text">Lemari asam (fume hood) terkalibrasi dan memiliki daya hisap udara sesuai standar keselamatan.</span>
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" class="audit-check">
+                <span class="check-item-text">Kotak P3K lengkap dengan kassa steril, plester, larutan povidone iodine, dan catatan pemakaian.</span>
+              </label>
+            </div>
+
+            <div class="audit-result-box">
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Skor Kesiapsiagaan:</div>
+                <div id="auditScoreNum" class="audit-score-num">75%</div>
+                <span id="auditScoreBadge" class="badge badge-emerald">Cukup Baik</span>
+              </div>
+              <div style="max-width: 55%; font-size: 0.8rem; color: var(--text-secondary);" id="auditScoreNote">
+                Laboratorium Anda telah memenuhi sebagian besar standar K3. Lengkapi sisa poin untuk mencapai standar ideal 96.74%.
+              </div>
+            </div>
+          </article>
+
+          <!-- Tool 2: Interactive Quiz Box -->
+          <article class="tool-card">
+            <span class="badge badge-amber">Uji Pengetahuan</span>
+            <h3>Kuis Interaktif K3 Laboratorium</h3>
+            <p class="tool-desc">Uji ketepatan Anda dalam menyikapi skenario nyata dan dasar teori K3 dari jurnal ilmiah:</p>
+
+            <div id="quizBoxContainer" class="quiz-box">
+              <!-- Dynamically populated via app.js -->
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: REPOSITORI JURNAL ILMIAH REFERENSI
+         =================================================================== -->
+    <section id="jurnal" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-emerald">Kajian Akademik & Pustaka</span>
+          <h2 class="section-title">Repositori Jurnal Ilmiah Referensi</h2>
+          <p class="section-subtitle">
+            Seluruh data, persentase kepatuhan, SOP, serta pembahasan potensi bahaya di website ini bersumber langsung dari 3 publikasi artikel jurnal ilmiah nasional terakreditasi:
+          </p>
+        </div>
+
+        <div id="journalsGrid" class="journals-grid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: TIM PENYUSUN & KOLABORATOR
+         =================================================================== -->
+    <section id="tim" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-cyan">Kolaborasi & Pengembang</span>
+          <h2 class="section-title">Tim Penyusun Proyek K3L</h2>
+          <p class="section-subtitle">
+            Website edukasi statis K3 ini dikembangkan sebagai karya tugas bersama komprehensif dalam mengintegrasikan riset keselamatan kerja ilmiah ke dalam format antarmuka digital modern.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-avatar-box">A</div>
+            <h3 class="team-name">Angelita Widianti</h3>
+            <div class="team-role">Researcher</div>
+            <p class="team-desc">Bertanggung jawab atas riset pustaka jurnal keselamatan kerja, analisis data empiris kepatuhan K3, dan studi kasus laboratorium.</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar-box" style="background: linear-gradient(135deg, #06b6d4, #0284c7);">B</div>
+            <h3 class="team-name">Bintang Dandy Nicky Joan</h3>
+            <div class="team-role">Website Designer</div>
+            <p class="team-desc">Merancang konsep antarmuka pengguna (UI/UX), tata letak visual modern, sistem desain responsif, serta palet warna dark & light mode.</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar-box" style="background: linear-gradient(135deg, #f59e0b, #d97706);">M</div>
+            <h3 class="team-name">Maya Salsabila</h3>
+            <div class="team-role">Researcher</div>
+            <p class="team-desc">Mengkaji 5 klasifikasi potensi bahaya Dr. Suma'mur, standar alat pelindung diri (APD), simbol bahaya GHS, serta kerangka regulasi K3.</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar-box" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">F</div>
+            <h3 class="team-name">Muhammad Fery Ardiansyah</h3>
+            <div class="team-role">Programming</div>
+            <p class="team-desc">Mengembangkan arsitektur web interaktif, logika kalkulator audit kesiapsiagaan lab, kuis pengetahuan K3, dan visualisasi grafik data.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#beranda" class="brand-logo">
+            <div class="brand-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <span class="brand-text">SafeSphere <span>K3L</span></span>
+          </a>
+          <p>
+            Portal Edukasi Keselamatan, Kesehatan Kerja dan Lingkungan yang didedikasikan untuk membangun budaya zero accident dan keselamatan laboratorium berbasis bukti ilmiah.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi Materi</h4>
+          <ul class="footer-links">
+            <li><a href="#urgensi">Urgensi & 3 Pilar K3L</a></li>
+            <li><a href="#standar-lab">7 Standar K3 Lab Kimia</a></li>
+            <li><a href="#klasifikasi-bahaya">5 Faktor Bahaya Suma'mur</a></li>
+            <li><a href="#rambu-k3">Katalog Rambu & Simbol GHS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Fitur Interaktif</h4>
+          <ul class="footer-links">
+            <li><a href="#grafik-data">Grafik Kepatuhan & Riset</a></li>
+            <li><a href="#toolkit-k3">Kalkulator Audit Kesiapsiagaan</a></li>
+            <li><a href="#toolkit-k3">Kuis Pengetahuan K3</a></li>
+            <li><a href="#jurnal">Repositori 3 Jurnal Ilmiah</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Referensi Jurnal Utama</h4>
+          <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-muted);">
+            1. JK3L Universitas Andalas (2020)<br>
+            2. Gojhes Poltekkes Palembang (2025)<br>
+            3. Compromise Journal SMAN 3 Bone (2025)
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.825rem; font-weight: 700; color: var(--brand-emerald-light);">
+            "Safety First, Zero Accident, Healthy Future"
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 SafeSphere K3. Karya Tugas Bersama K3L. Seluruh hak cipta dilindungi undang-undang.
+        </div>
+        <div>
+          Dirancang dengan Standar Web Aksesibel & Responsif
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       GLOBAL MODAL DIALOG (For Indicators, Signs, & Journal Details)
+       =================================================================== -->
+  <div id="globalModal" class="modal-backdrop" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" type="button" onclick="closeGlobalModal()" aria-label="Tutup Jendela Modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
