@@ -291,7 +291,7 @@ const quizQuestions = [
 // 2. DOM INITIALIZATION & EVENT LISTENERS
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
-  initNavigation();
+  initPageRouter();
   renderLabIndicators();
   renderSigns("all");
   renderJournals();
@@ -350,44 +350,110 @@ function updateThemeIcon(theme) {
   }
 }
 
-// Navigation & Smooth Scroll
-function initNavigation() {
+// Page Router & Dynamic Page Switching (SPA)
+function initPageRouter() {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileNav = document.getElementById("mobileNav");
-  
+
+  // Mobile menu toggle
   if (mobileMenuBtn && mobileNav) {
     mobileMenuBtn.addEventListener("click", () => {
       mobileNav.classList.toggle("open");
     });
-
-    // Close when link clicked
-    mobileNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileNav.classList.remove("open");
-      });
-    });
   }
 
-  // Active navigation spy
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
+  function switchPage(pageId) {
+    const rawId = (pageId || "beranda").replace("#", "").trim();
+    let target = rawId || "beranda";
+    let targetEl = document.getElementById(target);
 
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (window.pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
-      }
+    // If target doesn't exist or is not a page-view, fallback to beranda
+    if (!targetEl || !targetEl.classList.contains("page-view")) {
+      target = "beranda";
+      targetEl = document.getElementById("beranda");
+    }
+
+    // Toggle active state for all page views
+    const pageViews = document.querySelectorAll(".page-view");
+    pageViews.forEach(page => {
+      page.classList.remove("active");
     });
+
+    if (targetEl) {
+      targetEl.classList.add("active");
+    }
+
+    // Update active state on nav links
+    const navLinks = document.querySelectorAll(".nav-link");
+    const dropdownItems = document.querySelectorAll(".nav-dropdown-item");
 
     navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
+      const href = link.getAttribute("href");
+      if (href === `#${target}`) {
         link.classList.add("active");
+      } else {
+        link.classList.remove("active");
       }
     });
+
+    let isDropdownActive = false;
+    dropdownItems.forEach(item => {
+      const href = item.getAttribute("href");
+      if (href === `#${target}`) {
+        item.classList.add("active");
+        isDropdownActive = true;
+      } else {
+        item.classList.remove("active");
+      }
+    });
+
+    const dropdownBtn = document.querySelector(".nav-dropdown-btn");
+    if (dropdownBtn) {
+      if (isDropdownActive) {
+        dropdownBtn.classList.add("active");
+      } else {
+        dropdownBtn.classList.remove("active");
+      }
+    }
+
+    // Close mobile nav drawer if open
+    if (mobileNav) {
+      mobileNav.classList.remove("open");
+    }
+
+    // Scroll to top of the page smoothly
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Handle browser Back / Forward buttons
+  window.addEventListener("hashchange", () => {
+    switchPage(window.location.hash);
   });
+
+  // Global click interception for hash links pointing to pages
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[href^='#']");
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const pageId = href.substring(1);
+    const targetPage = document.getElementById(pageId);
+
+    if (targetPage && targetPage.classList.contains("page-view")) {
+      e.preventDefault();
+      if (window.location.hash === href) {
+        switchPage(pageId);
+      } else {
+        window.location.hash = href;
+      }
+    }
+  });
+
+  // Initial load: respect hash or open beranda
+  const initialHash = window.location.hash ? window.location.hash.substring(1) : "beranda";
+  switchPage(initialHash);
 }
 
 // Render 7 Indikator K3 Laboratorium

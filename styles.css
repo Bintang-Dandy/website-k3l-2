@@ -432,6 +432,307 @@ img {
   display: flex;
 }
 
+/* ===================================================================
+   DYNAMIC PAGE-VIEW (SPA) ROUTING & SEPARATION
+   =================================================================== */
+.page-view {
+  display: none;
+}
+
+.page-view.active {
+  display: block;
+  animation: fadeInPageView 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInPageView {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-view.section {
+  padding: 2.5rem 0 5rem;
+}
+
+/* Page Top Navigation & Breadcrumbs */
+.page-top-nav {
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-emerald-light);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  transition: var(--transition);
+}
+
+.btn-back-home:hover {
+  background: rgba(16, 185, 129, 0.2);
+  color: #ffffff;
+  transform: translateX(-3px);
+  border-color: var(--brand-emerald);
+}
+
+[data-theme="light"] .btn-back-home {
+  color: var(--brand-emerald-dark);
+  border-color: rgba(5, 150, 105, 0.25);
+  background: rgba(5, 150, 105, 0.08);
+}
+
+[data-theme="light"] .btn-back-home:hover {
+  background: rgba(5, 150, 105, 0.15);
+  color: var(--brand-emerald-dark);
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.page-breadcrumb a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.page-breadcrumb a:hover {
+  color: var(--brand-emerald-light);
+}
+
+.breadcrumb-sep {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.breadcrumb-active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Page Bottom Navigation (Prev / Next Arrows) */
+.page-bottom-nav {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.page-nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.page-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.35rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  transition: var(--transition);
+  min-width: 240px;
+}
+
+.page-nav-btn:hover {
+  border-color: var(--brand-emerald);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.page-nav-btn small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.page-nav-btn span {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.page-nav-btn.next-btn {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* ===================================================================
+   HOMEPAGE MODULES CATALOG
+   =================================================================== */
+.modules-catalog-wrap {
+  margin-top: 4rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.catalog-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3rem auto;
+}
+
+.catalog-title {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 800;
+}
+
+.catalog-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+
+.module-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-emerald), #0284c7);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.module-card:hover::before {
+  opacity: 1;
+}
+
+.module-card-icon {
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.module-card-badge {
+  margin-bottom: 0.5rem;
+}
+
+.module-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+  color: var(--text-primary);
+}
+
+.module-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.module-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+  gap: 0.5rem;
+}
+
+.module-card-tag {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.module-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-emerald-light);
+  transition: var(--transition);
+}
+
+.module-card-btn svg {
+  transition: transform 0.2s;
+}
+
+.module-card:hover .module-card-btn {
+  color: #ffffff;
+}
+
+[data-theme="light"] .module-card:hover .module-card-btn {
+  color: var(--brand-emerald-dark);
+}
+
+.module-card:hover .module-card-btn svg {
+  transform: translateX(3px);
+}
+
+/* Active Dropdown Button State */
+.nav-dropdown-btn.active {
+  color: var(--brand-emerald-light);
+}
+
+[data-theme="light"] .nav-dropdown-btn.active {
+  color: var(--brand-emerald);
+}
+
 /* Section Common Styling */
 .section {
   padding: 5rem 0;
