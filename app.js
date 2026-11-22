@@ -350,7 +350,7 @@ function initTheme() {
   const themeToggleBtn = document.getElementById("themeToggleBtn");
   const themeIcon = document.getElementById("themeIcon");
   
-  const savedTheme = localStorage.getItem("safesphere_theme") || "dark";
+  const savedTheme = localStorage.getItem("safesphere_theme") || "light";
   document.documentElement.setAttribute("data-theme", savedTheme);
   updateThemeIcon(savedTheme);
 
